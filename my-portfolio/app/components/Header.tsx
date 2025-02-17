@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { FC } from 'react';
 
 /**
  * Header Component
@@ -8,13 +7,13 @@ import { FC } from 'react';
  *
  * @returns {JSX.Element} The Header component
  */
-const Header: FC = () => {
+const Header = () => {
   return (
     <header
       className='w-full py-4 px-8 flex justify-between items-center bg-blue-900 shadow-md'
       aria-label='Header'
     >
-      <h1 className='text-xl font-bold text-white'>My Portfolio</h1>
+      <img src='/logos/H-Logo-Trace.png' alt='Logo' className='h-8' aria-label='Logo' />
       <nav aria-label='Main Navigation'>
         <ul className='flex gap-6'>
           <li>
