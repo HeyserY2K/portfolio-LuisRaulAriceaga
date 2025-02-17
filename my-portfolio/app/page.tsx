@@ -1,8 +1,8 @@
-import About from './pages/AboutPage';
-import Blog from './pages/BlogPage';
-import Projects from './pages/ProjectsPage';
-import Store from './pages/StorePage';
-import Social from './pages/SocialPage';
+import About from './sections/about/page';
+import Blog from './sections/blog/page';
+import Projects from './sections/projects/page';
+import Store from './sections/store/page';
+import Social from './sections/social/page';
 
 /**
  * Home Component

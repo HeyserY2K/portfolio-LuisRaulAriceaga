@@ -44,7 +44,7 @@ interface ResumeData {
   languages: string[];
 }
 
-async function getResumeData(): Promise<ResumeData> {
+const getResumeData = async (): Promise<ResumeData> => {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/api/resume`,
     {
@@ -55,9 +55,9 @@ async function getResumeData(): Promise<ResumeData> {
     throw new Error('Failed to fetch resume data');
   }
   return res.json();
-}
+};
 
-export default async function ResumePage() {
+const ResumePage = async () => {
   const resume = await getResumeData();
 
   return (
@@ -147,4 +147,6 @@ export default async function ResumePage() {
       </section>
     </main>
   );
-}
+};
+
+export default ResumePage;

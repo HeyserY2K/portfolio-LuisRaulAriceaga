@@ -7,9 +7,12 @@ import React from 'react';
  *
  * @returns {JSX.Element} The Footer component
  */
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
-    <footer className='w-full py-6 text-center bg-gray-200' aria-label='Footer'>
+    <footer
+      className='w-full py-6 text-center bg-gray-800 text-white'
+      aria-label='Footer'
+    >
       <p>© {new Date().getFullYear()} My Portfolio. All rights reserved.</p>
     </footer>
   );

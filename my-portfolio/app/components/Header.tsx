@@ -23,27 +23,27 @@ const Header: FC = () => {
             </Link>
           </li>
           <li>
-            <Link href='/#about' aria-label='About'>
+            <Link href='/sections/about' aria-label='About'>
               <span className='text-white hover:text-blue-300'>About</span>
             </Link>
           </li>
           <li>
-            <Link href='/#blog' aria-label='Blog'>
+            <Link href='/sections/blog' aria-label='Blog'>
               <span className='text-white hover:text-blue-300'>Blog</span>
             </Link>
           </li>
           <li>
-            <Link href='/#projects' aria-label='Projects'>
+            <Link href='/sections/projects' aria-label='Projects'>
               <span className='text-white hover:text-blue-300'>Projects</span>
             </Link>
           </li>
           <li>
-            <Link href='/#store' aria-label='Store'>
+            <Link href='/sections/store' aria-label='Store'>
               <span className='text-white hover:text-blue-300'>Store</span>
             </Link>
           </li>
           <li>
-            <Link href='/#social' aria-label='Social'>
+            <Link href='/sections/social' aria-label='Social'>
               <span className='text-white hover:text-blue-300'>Social</span>
             </Link>
           </li>

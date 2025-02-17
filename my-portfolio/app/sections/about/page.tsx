@@ -1,5 +1,3 @@
-import React from 'react';
-
 /**
  * About Section Component
  *
@@ -8,7 +6,7 @@ import React from 'react';
  *
  * @returns {JSX.Element} The About section component
  */
-const About: React.FC = () => {
+const About = () => {
   return (
     <section id='about' className='py-16'>
       <div className='max-w-4xl mx-auto px-4'>
