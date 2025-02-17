@@ -1,0 +1,41 @@
+{
+  "name": "Luis Raul Ariceaga",
+  "location": "Monterrey, MX",
+  "contact": {
+    "phone": "+52 868 153 7152",
+    "email": "luisra.heyser@gmail.com"
+  },
+  "summary": "I am a developer dedicated to making technology more accessible...",
+  "skills": ["Web Development", "UX/UI", "API Design", "React", "Next.js"],
+  "experience": [
+    {
+      "title": "Front-End Web Designer",
+      "company": "Dabi | Monterrey, Mexico",
+      "dates": "June 2024 - Present",
+      "description": [
+        "Designing and developing UI views using Figma, React, Next.js.",
+        "Enhancing UI/UX for better customer engagement."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Software Development Engineer",
+      "institution": "Universidad Tecmilenio, Monterrey",
+      "graduationDate": "January 2023"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Interactivity and Multimedia Design",
+      "dates": "2019 - 2022"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Wireframe (Terminal) - Robotics Tournament Organizer",
+      "description": "Streamlined the process of scheduling, judging, awarding robotics competitions..."
+    }
+  ],
+  "languages": ["English (Advanced C1)", "Spanish (Native)"]
+} 
