@@ -1,8 +1,8 @@
-import About from './sections/about/page';
-import Blog from './sections/blog/page';
-import Projects from './sections/projects/page';
-import Store from './sections/store/page';
-import Social from './sections/social/page';
+import AboutSection from './components/sections/AboutSection';
+import BlogList from './components/sections/BlogList';
+import ProjectsGrid from './components/sections/ProjectsGrid';
+import StoreTeaser from './components/sections/StoreTeaser';
+import SocialLinks from './components/sections/SocialLinks';
 
 /**
  * Home Component
@@ -15,11 +15,11 @@ import Social from './sections/social/page';
 const Home: React.FC = () => {
   return (
     <div className='flex flex-col gap-16'>
-      <About />
-      <Blog />
-      <Projects />
-      <Store />
-      <Social />
+      <AboutSection />
+      <BlogList />
+      <ProjectsGrid />
+      <StoreTeaser />
+      <SocialLinks />
     </div>
   );
 };

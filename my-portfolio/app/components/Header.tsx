@@ -23,6 +23,11 @@ const Header: FC = () => {
             </Link>
           </li>
           <li>
+            <Link href='/sections/resume' aria-label='Resume'>
+              <span className='text-white hover:text-blue-300'>Resume</span>
+            </Link>
+          </li>
+          <li>
             <Link href='/sections/about' aria-label='About'>
               <span className='text-white hover:text-blue-300'>About</span>
             </Link>

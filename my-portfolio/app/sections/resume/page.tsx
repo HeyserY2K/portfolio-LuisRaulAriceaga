@@ -1,6 +1,5 @@
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
+import React from 'react';
+export const metadata = {
   title: 'Resume - Luis Raul Ariceaga',
   description: 'Professional Resume for Luis Raul Ariceaga',
 };
@@ -45,16 +44,9 @@ interface ResumeData {
 }
 
 const getResumeData = async (): Promise<ResumeData> => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/api/resume`,
-    {
-      cache: 'no-cache',
-    }
-  );
-  if (!res.ok) {
-    throw new Error('Failed to fetch resume data');
-  }
-  return res.json();
+  // Preferimos importar datos estáticos para rendimiento y simplicidad.
+  const data = await import('@/data/resume.json');
+  return data.default as ResumeData;
 };
 
 const ResumePage = async () => {

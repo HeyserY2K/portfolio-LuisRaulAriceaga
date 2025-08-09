@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Footer from './components/layout/Footer';
+import Header from './components/layout/Header';
 
 /**
  * Configure fonts with custom variables for global use.
@@ -21,8 +21,27 @@ const geistMono = Geist_Mono({
  * Metadata for SEO and social sharing.
  */
 export const metadata: Metadata = {
-  title: 'My Portfolio',
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+  ),
+  title: {
+    default: 'My Portfolio - Luis Raul Ariceaga',
+    template: '%s | Luis Raul Ariceaga',
+  },
   description: 'Showcasing my projects, blog, and future store.',
+  openGraph: {
+    title: 'My Portfolio - Luis Raul Ariceaga',
+    description: 'Showcasing my projects, blog, and future store.',
+    url: '/',
+    siteName: 'Luis Raul Ariceaga',
+    images: ['/opengraph-image'],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@your_twitter',
+    creator: '@your_twitter',
+  },
 };
 
 /**
@@ -36,9 +55,9 @@ export const metadata: Metadata = {
  */
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <html lang='en'>
+    <html lang='es'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900 dark:bg-gray-900 dark:text-white`}
+        className={`${geistSans.className} ${geistMono.variable} antialiased bg-white text-gray-900 dark:bg-gray-900 dark:text-white`}
       >
         <Header />
         <main className='container mx-auto p-6 sm:p-12'>{children}</main>
