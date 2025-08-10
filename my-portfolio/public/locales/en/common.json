@@ -40,7 +40,10 @@
     "hero": {
       "greeting": "Hi, I'm",
       "role": "Frontend Developer & UI Designer",
-      "summary": "Accomplished Frontend Engineer and UX Strategist with over five years of experience in transforming intricate business objectives into sophisticated, high-performance digital solutions."
+      "summary": "Accomplished Frontend Engineer and UX Strategist with over five years of experience in transforming intricate business objectives into sophisticated, high-performance digital solutions.",
+      "availability": "Available for senior frontend & UX-led roles",
+      "viewResume": "View Resume",
+      "emailCta": "Email Me"
     },
     "about": {
       "title": "About Me",
@@ -109,4 +112,3 @@
     }
   }
 }
-

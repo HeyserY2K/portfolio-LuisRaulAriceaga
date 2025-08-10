@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import Image from 'next/image';
 import GlassButton from '@/app/components/ui/GlassButton';
@@ -7,7 +7,7 @@ import Section from '@/app/components/ui/Section';
 import { useI18n } from '@/app/i18n/I18nProvider';
 
 export default function Hero() {
-  const { locale } = useI18n();
+  const { locale, t } = useI18n();
   const prefix = `/${locale}`;
 
   return (
@@ -15,28 +15,28 @@ export default function Hero() {
       <div className="grid items-center gap-8 md:grid-cols-2">
         <div>
           <div className="mb-4 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs backdrop-blur-md dark:bg-white/5">
-            <span className="mr-2 inline-block h-2 w-2 rounded-full bg-[rgba(var(--accent-contrast-rgb),0.9)]" />
-            <span>Available for senior frontend & UX-led roles</span>
+            <span>{t('sections.hero.availability')}</span>
           </div>
 
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-            Luis Raúl Ariceaga
-          </h1>
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Luis Raúl Ariceaga</h1>
           <p className="mt-3 max-w-xl text-lg text-[var(--text-secondary)]">
-            Frontend Engineer & UX Strategist crafting fast, accessible experiences and design systems.
+            {t('sections.hero.summary')}
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
             <GlassButton as="a" href={`${prefix}/sections/resume`}>
-              View Resume
+              {t('sections.hero.viewResume')}
             </GlassButton>
             <GlassButton
               as="a"
               href={`mailto:luisra.heyser@gmail.com`}
               variant="secondary"
               className="ring-1 ring-[rgba(var(--accent-contrast-rgb),0.25)]"
+              style={{
+                alignContent: 'center',
+              }}
             >
-              Email Me
+              {t('sections.hero.emailCta')}
             </GlassButton>
           </div>
         </div>
@@ -57,5 +57,3 @@ export default function Hero() {
     </Section>
   );
 }
-
-

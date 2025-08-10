@@ -40,7 +40,10 @@
     "hero": {
       "greeting": "Hola, soy",
       "role": "Desarrollador Frontend y Diseñador UI",
-      "summary": "Ingeniero Frontend y Estratega UX con más de cinco años de experiencia en transformar objetivos de negocio complejos en soluciones digitales sofisticadas y de alto rendimiento."
+      "summary": "Ingeniero Frontend y Estratega UX con más de cinco años de experiencia en transformar objetivos de negocio complejos en soluciones digitales sofisticadas y de alto rendimiento.",
+      "availability": "Disponible para roles senior de frontend y liderazgo UX",
+      "viewResume": "Ver Currículum",
+      "emailCta": "Escríbeme"
     },
     "about": {
       "title": "Sobre mí",

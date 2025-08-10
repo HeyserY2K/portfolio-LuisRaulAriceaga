@@ -21,7 +21,7 @@ type GlassButtonProps = CommonProps & (AnchorProps | ButtonProps);
 export default function GlassButton(props: GlassButtonProps) {
   const { variant = 'primary', className, children } = props;
   const base = cn(
-    'inline-flex items-center justify-center rounded-full px-5 py-2 text-sm font-medium transition-all duration-300',
+    'inline-flex h-10 items-center justify-center rounded-full px-5 text-sm font-medium leading-none text-center transition-all duration-300',
     'border border-[color:var(--glass-border)] backdrop-blur-[12px] shadow-[0_8px_20px_rgba(0,0,0,var(--glass-shadow-strength))]',
   );
 
