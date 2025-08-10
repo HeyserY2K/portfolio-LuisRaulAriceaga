@@ -1,7 +1,53 @@
-import SocialLinks from '@/app/components/sections/SocialLinks';
+import Link from 'next/link';
 
-const SocialPage = () => {
-  return <SocialLinks />;
+/**
+ * Social Section Component
+ *
+ * Displays social media links and professional profiles.
+ * Each link opens in a new tab for better user experience.
+ *
+ * @returns {JSX.Element} The Social section component
+ */
+const Social = () => {
+  const socialLinks = [
+    {
+      name: 'GitHub',
+      url: 'https://github.com/yourusername',
+      icon: '📦',
+    },
+    {
+      name: 'LinkedIn',
+      url: 'https://linkedin.com/in/yourusername',
+      icon: '💼',
+    },
+    {
+      name: 'Twitter',
+      url: 'https://twitter.com/yourusername',
+      icon: '🐦',
+    },
+  ];
+
+  return (
+    <section id='social' className='py-16'>
+      <div className='mx-auto max-w-4xl px-4'>
+        <h2 className='mb-8 text-3xl font-bold'>Connect With Me</h2>
+        <div className='grid grid-cols-1 gap-6 md:grid-cols-3'>
+          {socialLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.url}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex items-center justify-center rounded-lg bg-[var(--card-bg)] p-6 transition-colors hover:bg-[var(--brand-accent)]'
+            >
+              <span className='mr-2 text-2xl'>{link.icon}</span>
+              <span className='font-medium'>{link.name}</span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
-export default SocialPage;
+export default Social;

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Inter } from 'next/font/google';
+
 import './globals.css';
 import Footer from './components/layout/Footer';
 import Header from './components/layout/Header';
@@ -7,13 +8,8 @@ import Header from './components/layout/Header';
 /**
  * Configure fonts with custom variables for global use.
  */
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const inter = Inter({
+  variable: '--font-inter',
   subsets: ['latin'],
 });
 
@@ -55,10 +51,8 @@ export const metadata: Metadata = {
  */
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <html lang='es'>
-      <body
-        className={`${geistSans.className} ${geistMono.variable} antialiased bg-white text-gray-900 dark:bg-gray-900 dark:text-white`}
-      >
+    <html lang='en'>
+      <body className={`${inter.variable} bg-[var(--background)] text-[var(--text-primary)] antialiased`}>
         <Header />
         <main className='container mx-auto p-6 sm:p-12'>{children}</main>
         <Footer />

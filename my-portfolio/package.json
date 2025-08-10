@@ -7,14 +7,17 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "eslint . --fix",
+    "lint:fix": "next lint --fix",
     "format": "prettier --write .",
     "prepare": "husky"
   },
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.1.7"
+    "next": "15.1.7",
+    "country-flag-icons": "^1.5.18",
+    "next-intl": "^3.26.5",
+    "next-i18next": "^15.4.2"
   },
   "devDependencies": {
     "typescript": "^5",

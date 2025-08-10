@@ -1,0 +1,227 @@
+{
+  "personal_information": {
+    "first_name": "Luis",
+    "last_name": "Ariceaga",
+    "preferred_name": "Luis Raúl",
+    "email": "luisra.heyser@gmail.com",
+    "phone": "+52 868 1537 152",
+    "location": {
+      "country": "México",
+      "state_region": "Nuevo León",
+      "city": "Monterrey"
+    },
+    "address": "",
+    "postal_code": "",
+    "github_url": "",
+    "portfolio_url": "https://docs.google.com/presentation/d/1woNbaj2t0_RWiYDdI3QIJ9UNs7YEdXNwOLsBc5MK3RA/",
+    "linkedin_url": "https://www.linkedin.com/in/lraf/"
+  },
+  "education_details": [
+    {
+      "degree_level": "Licenciatura",
+      "degree_title": "Ingeniería en Desarrollo de Software (Ciencias Computacionales)",
+      "institution": "Universidad Tecmilenio",
+      "location": "Monterrey, MX",
+      "start_date": "2019-Ene",
+      "end_date": "2023-Ene",
+      "final_evaluation_grade": "Promedio 9.6",
+      "certifications": [
+        "Diseño Interactivo y Multimedia (2019)",
+        "Desarrollo de Aplicaciones Móviles (2019)",
+        "Programación de Videojuegos (2019)",
+        "Fundamentos de UX – Designlab (2024)",
+        "Diplomado en Inteligencia Artificial – Big School y Universidad Isabel I, España (esperado Dic 2024)"
+      ]
+    }
+  ],
+  "professional_summary": "Ingeniero Frontend y Estratega UX con más de cinco años de experiencia en transformar objetivos de negocio complejos en soluciones digitales sofisticadas y de alto rendimiento. Historial comprobado en asegurar alta disponibilidad del sistema y experto en liderar equipos multifuncionales en la implementación de metodologías de desarrollo impulsadas por IA.",
+  "core_skills": [
+    "Diseño Centrado en el Usuario",
+    "React / Next.js / Node.js",
+    "Figma",
+    "Automatización de Flujos con IA",
+    "Facilitación Ágil / Scrum",
+    "Liderazgo Organizacional"
+  ],
+  "desired_roles": [
+    "Desarrollador Front-End Senior",
+    "Ingeniero Full-Stack JavaScript",
+    "Desarrollador de Productos con Enfoque UX"
+  ],
+  "experience_details": [
+    {
+      "position": "Desarrollador Front-End y Diseñador UI",
+      "company": "DABI",
+      "location": "Monterrey, MX",
+      "employment_period": {
+        "start_date": "2024-Jun",
+        "end_date": "Presente"
+      },
+      "industry": "Software / SaaS",
+      "responsibilities": [
+        "Diseño y desarrollo de vistas UI con Figma, React y MUI.",
+        "Mantenimiento de una biblioteca centralizada de componentes y manual de marca.",
+        "Implementación de herramientas de IA para automatización de reuniones y resolución de errores.",
+        "Pruebas y mejoras continuas de componentes en sprints ágiles."
+      ],
+      "achievements": [
+        "Reducción del tiempo de carga inicial en un 40 %.",
+        "Implementación de nuevas vistas conforme a estándares actuales, priorizando necesidades del usuario.",
+        "Mentoría a cinco desarrolladores junior sobre el uso y gobernanza del sistema de diseño."
+      ],
+      "technologies_used": ["React", "MUI", "Figma", "Node JS"]
+    },
+    {
+      "position": "Desarrollador Web Full-Stack",
+      "company": "Didaktron",
+      "location": "Monterrey, MX",
+      "employment_period": {
+        "start_date": "2023-08",
+        "end_date": "2024-06"
+      },
+      "industry": "Tecnología Educativa",
+      "responsibilities": [
+        "Diseño, codificación y pruebas de funcionalidades en LMS usando Laravel.",
+        "Creación de UX/UI para app móvil de torneos de robótica.",
+        "Supervisión y capacitación de jueces en competencias a nivel estatal."
+      ],
+      "achievements": [
+        "Despliegue de LMS con más de 3 000 usuarios activos mensuales.",
+        "Incremento del 30 % en el engagement mediante seguimiento gamificado.",
+        "Rediseño de interfaz web del LMS para mejorar accesibilidad y consistencia."
+      ],
+      "technologies_used": ["Laravel", "Jquery", "MySQL", "Bitbucket", "Trello"]
+    },
+    {
+      "position": "Especialista en Flujos de Trabajo (Planogramas / CX)",
+      "company": "Walgreens – Tata Consultancy Services",
+      "location": "Remoto, MX",
+      "employment_period": {
+        "start_date": "2022-08",
+        "end_date": "2023-08"
+      },
+      "industry": "Retail / Consultoría",
+      "responsibilities": [
+        "Diseño de planogramas para múltiples departamentos de tienda.",
+        "Facilitación de comunicación entre equipos de comercialización.",
+        "Talleres mensuales de capacitación sobre estándares visuales de exhibición."
+      ],
+      "achievements": [
+        "Creación de más de 140 planogramas para 15 departamentos.",
+        "Optimización de colocaciones que generaron ahorros estimados en $250 000 USD."
+      ],
+      "technologies_used": ["JDA Planogram", "PowerPoint", "Excel", "Teams"]
+    },
+    {
+      "position": "Consultor IT (E-Commerce)",
+      "company": "The Home Depot – Tata Consultancy Services",
+      "location": "Remoto, MX",
+      "employment_period": {
+        "start_date": "2021-06",
+        "end_date": "2022-08"
+      },
+      "industry": "Retail / Consultoría",
+      "responsibilities": [
+        "Colaboración con equipos SCRUM para mejorar funcionalidades en homedepot.com.",
+        "Implementación de microservicio de wishlist y refactorización de componentes en React.",
+        "Completación de más de 20 cursos especializados en arquitectura cloud y DevOps."
+      ],
+      "achievements": [
+        "Participación en microservicio de wishlist con endpoints escalables en múltiples regiones.",
+        "Refactorización de componentes React para cumplir nuevos lineamientos de diseño y mejorar legibilidad."
+      ],
+      "technologies_used": ["React", "Js", "Github"]
+    }
+  ],
+  "tech_profile": {
+    "programming_languages": [
+      {
+        "name": "JavaScript / TypeScript",
+        "proficiency": "Avanzado",
+        "years_experience": "5"
+      },
+      {
+        "name": "PHP",
+        "proficiency": "Intermedio",
+        "years_experience": "2"
+      }
+    ],
+    "frameworks_libraries": [
+      {
+        "name": "React / Next.js",
+        "proficiency": "Avanzado",
+        "years_experience": "3"
+      },
+      {
+        "name": "Laravel",
+        "proficiency": "Intermedio",
+        "years_experience": "1"
+      }
+    ],
+    "tools_platforms": [
+      {
+        "name": "Figma",
+        "proficiency": "Avanzado",
+        "years_experience": "4"
+      },
+      {
+        "name": "Jest",
+        "proficiency": "Intermedio",
+        "years_experience": "2"
+      }
+    ],
+    "databases": [
+      {
+        "name": "MySQL",
+        "proficiency": "Intermedio",
+        "years_experience": "2"
+      }
+    ],
+    "cloud_services": [
+      {
+        "name": "AWS",
+        "proficiency": "Básico",
+        "years_experience": "1"
+      }
+    ],
+    "version_control": [
+      {
+        "system": "Git",
+        "proficiency": "Avanzado"
+      }
+    ],
+    "methodologies": ["Ágil / Scrum", "Design Thinking"],
+    "open_source_contributions": []
+  },
+  "languages": [
+    {
+      "name": "Español",
+      "proficiency": "Nativo"
+    },
+    {
+      "name": "Inglés",
+      "proficiency": "C1"
+    }
+  ],
+  "interests": ["Mentoría en robótica", "Fotografía", "Ajedrez"],
+  "work_preferences": {
+    "remote_work": true,
+    "in_person_work": true,
+    "open_to_relocation": true,
+    "willing_to_complete_assessments": true,
+    "willing_to_undergo_drug_tests": true,
+    "willing_to_undergo_background_checks": true
+  },
+  "availability": {
+    "notice_period": ""
+  },
+  "salary_expectations": {
+    "currency": "",
+    "range": {
+      "min": 0,
+      "max": 0
+    }
+  },
+  "legal_authorization": []
+}
+

@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "Luis Raul Ariceaga - Portfolio",
+    "description": "Frontend Engineer and UX Strategist with experience in transforming business objectives into high-performance digital solutions"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog",
+    "projects": "Projects",
+    "store": "Store",
+    "social": "Social",
+    "resume": "Resume",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "contact": "Contact",
+    "aria": {
+      "main": "Main Navigation",
+      "home": "Go to Home",
+      "about": "About",
+      "blog": "Blog",
+      "projects": "Projects",
+      "store": "Store",
+      "social": "Social",
+      "resume": "View Resume"
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Luis Raul's Portfolio. All rights reserved.",
+    "aria": {
+      "footer": "Footer"
+    },
+    "social": {
+      "linkedin": "LinkedIn Profile",
+      "github": "GitHub Profile"
+    }
+  },
+  "sections": {
+    "hero": {
+      "greeting": "Hi, I'm",
+      "role": "Frontend Developer & UI Designer",
+      "summary": "Accomplished Frontend Engineer and UX Strategist with over five years of experience in transforming intricate business objectives into sophisticated, high-performance digital solutions."
+    },
+    "about": {
+      "title": "About Me",
+      "location": "Location",
+      "contact": "Contact Information",
+      "languages": "Languages",
+      "interests": "Interests",
+      "description": "Showcasing my projects, blog, and future store."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Thoughts and insights about web development, design, and technology."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "A showcase of my recent work and contributions."
+    },
+    "store": {
+      "title": "Store",
+      "description": "Digital products and resources coming soon."
+    },
+    "social": {
+      "title": "Connect With Me",
+      "github": "Check out my code on GitHub",
+      "linkedin": "Connect with me on LinkedIn",
+      "twitter": "Follow me on Twitter"
+    },
+    "experience": {
+      "title": "Professional Experience",
+      "current": "Present",
+      "location": "Location",
+      "industry": "Industry",
+      "responsibilities": "Key Responsibilities",
+      "achievements": "Key Achievements",
+      "technologies": "Technologies Used"
+    },
+    "education": {
+      "title": "Education",
+      "certifications": "Certifications",
+      "degree": "Degree",
+      "gpa": "GPA"
+    },
+    "skills": {
+      "title": "Skills",
+      "programming": "Programming Languages",
+      "frameworks": "Frameworks & Libraries",
+      "tools": "Tools & Platforms",
+      "databases": "Databases",
+      "cloud": "Cloud Services",
+      "methodologies": "Methodologies",
+      "proficiency": {
+        "beginner": "Beginner",
+        "intermediate": "Intermediate",
+        "advanced": "Advanced"
+      }
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "email": "Email",
+      "phone": "Phone",
+      "social": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "portfolio": "Portfolio"
+      }
+    }
+  }
+}
+

@@ -10,10 +10,12 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer
-      className='w-full py-6 text-center bg-gray-800 text-white'
+      className='w-full bg-[var(--header-bg)] py-6 text-center text-[var(--text-primary)]'
       aria-label='Footer'
     >
-      <p>© {new Date().getFullYear()} My Portfolio. All rights reserved.</p>
+      <p>
+        © {new Date().getFullYear()} Luis Raul&apos;s Portfolio. All rights reserved.
+      </p>
     </footer>
   );
 };

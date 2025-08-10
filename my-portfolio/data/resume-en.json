@@ -1,0 +1,227 @@
+{
+  "personal_information": {
+    "first_name": "Luis",
+    "last_name": "Ariceaga",
+    "preferred_name": "Luis Raúl",
+    "email": "luisra.heyser@gmail.com",
+    "phone": "+52 868 1537 152",
+    "location": {
+      "country": "Mexico",
+      "state_region": "Nuevo León",
+      "city": "Monterrey"
+    },
+    "address": "",
+    "postal_code": "",
+    "github_url": "",
+    "portfolio_url": "https://docs.google.com/presentation/d/1woNbaj2t0_RWiYDdI3QIJ9UNs7YEdXNwOLsBc5MK3RA/",
+    "linkedin_url": "https://www.linkedin.com/in/lraf/"
+  },
+  "education_details": [
+    {
+      "degree_level": "Bachelor’s",
+      "degree_title": "B.S. Software Development Engineering (Computer Science)",
+      "institution": "Universidad Tecmilenio",
+      "location": "Monterrey, MX",
+      "start_date": "2019-Jan",
+      "end_date": "2023-Jan",
+      "final_evaluation_grade": "3.7 GPA",
+      "certifications": [
+        "Interactivity & Multimedia Design (2019)",
+        "Mobile Application Development (2019)",
+        "Game Programming (2019)",
+        "UX Academy Foundations – Designlab (2024)",
+        "Master’s Diploma in Artificial Intelligence – Big School & Universidad Isabel I, Spain (expected 2024-Dec)"
+      ]
+    }
+  ],
+  "professional_summary": "Accomplished Frontend Engineer and UX Strategist with over five years of experience in transforming intricate business objectives into sophisticated, high-performance digital solutions. Proven track record in ensuring high system availability and adept at leading cross-functional teams in the implementation of AI-driven development methodologies.",
+  "core_skills": [
+    "User-Centred Design",
+    "React / Next.js / Node.js",
+    "Figma",
+    "AI-Driven Workflow Automation",
+    "Agile / Scrum Facilitation",
+    "Organisational Leadership"
+  ],
+  "desired_roles": [
+    "Senior Front-End Developer",
+    "Full-Stack JavaScript Engineer",
+    "UX-Centric Product Developer"
+  ],
+  "experience_details": [
+    {
+      "position": "Front-End Developer & UI Designer",
+      "company": "DABI",
+      "location": "Monterrey, MX",
+      "employment_period": {
+        "start_date": "2024-Jun",
+        "end_date": "Present"
+      },
+      "industry": "Software / SaaS",
+      "responsibilities": [
+        "Design and develop UI views with Figma, React and MUI.",
+        "Maintain a centralised component library and branding index.",
+        "Implement AI tools for meeting automation and error resolution.",
+        "Test and refine components within Agile sprints."
+      ],
+      "achievements": [
+        "Cut initial page-load times by 40 %.",
+        "Implemented new view designs aligned with modern standards while centralizing user needs.",
+        "Mentored a squad of five junior developers on design-system governance."
+      ],
+      "technologies_used": ["React", "MUI", "Figma", "Node JS"]
+    },
+    {
+      "position": "Full-Stack Web Developer",
+      "company": "Didaktron",
+      "location": "Monterrey, MX",
+      "employment_period": {
+        "start_date": "2023-08",
+        "end_date": "2024-06"
+      },
+      "industry": "EdTech",
+      "responsibilities": [
+        "Designed, coded and tested LMS features using Laravel.",
+        "Created UX/UI for robotics-tournament mobile app.",
+        "Supervised and trained judges at state-level robotics events."
+      ],
+      "achievements": [
+        "Launched LMS now supporting 3 000 + monthly active users.",
+        "Raised user engagement by 30 % via gamified progress tracking.",
+        "Revamped LMS web interface to improve accessibility and consistency across modules."
+      ],
+      "technologies_used": ["Laravel", "Jquery", "MySQL", "Bitbucket", "Trello"]
+    },
+    {
+      "position": "Workflow Specialist (Planogram / CX)",
+      "company": "Walgreens – Tata Consultancy Services",
+      "location": "Remote, MX",
+      "employment_period": {
+        "start_date": "2022-08",
+        "end_date": "2023-08"
+      },
+      "industry": "Retail / Consulting",
+      "responsibilities": [
+        "Authored planograms across multiple retail departments.",
+        "Facilitated communication between merchandising teams.",
+        "Delivered training workshops on visual-merchandising standards."
+      ],
+      "achievements": [
+        "Produced 140 + planograms covering 15 departments.",
+        "Identified placement optimisations saving an estimated $250 K in shrink and overstock."
+      ],
+      "technologies_used": ["JDA Planogram", "PowerPoint", "Excel", "Teams"]
+    },
+    {
+      "position": "IT Consultant (E-Commerce)",
+      "company": "The Home Depot – Tata Consultancy Services",
+      "location": "Remote, MX",
+      "employment_period": {
+        "start_date": "2021-06",
+        "end_date": "2022-08"
+      },
+      "industry": "Retail / Consulting",
+      "responsibilities": [
+        "Collaborated with SCRUM teams to enhance homedepot.com features.",
+        "Implemented wishlist micro-service and front-end React refactors.",
+        "Completed 20 + specialised courses in cloud architecture and DevOps."
+      ],
+      "achievements": [
+        "Collaborated on implementation of wishlist micro-service with scalable endpoints across multiple regions.",
+        "Refactored React components to align with new design specs, reducing code redundancy and improving readability."
+      ],
+      "technologies_used": ["React", "Js", "Github"]
+    }
+  ],
+  "tech_profile": {
+    "programming_languages": [
+      {
+        "name": "JavaScript / TypeScript",
+        "proficiency": "Advanced",
+        "years_experience": "5"
+      },
+      {
+        "name": "PHP",
+        "proficiency": "Intermediate",
+        "years_experience": "2"
+      }
+    ],
+    "frameworks_libraries": [
+      {
+        "name": "React / Next.js",
+        "proficiency": "Advanced",
+        "years_experience": "3"
+      },
+      {
+        "name": "Laravel",
+        "proficiency": "Intermediate",
+        "years_experience": "1"
+      }
+    ],
+    "tools_platforms": [
+      {
+        "name": "Figma",
+        "proficiency": "Advanced",
+        "years_experience": "4"
+      },
+      {
+        "name": "Jest",
+        "proficiency": "Intermediate",
+        "years_experience": "2"
+      }
+    ],
+    "databases": [
+      {
+        "name": "MySQL",
+        "proficiency": "Intermediate",
+        "years_experience": "2"
+      }
+    ],
+    "cloud_services": [
+      {
+        "name": "AWS",
+        "proficiency": "Beginner",
+        "years_experience": "1"
+      }
+    ],
+    "version_control": [
+      {
+        "system": "Git",
+        "proficiency": "Advanced"
+      }
+    ],
+    "methodologies": ["Agile / Scrum", "Design Thinking"],
+    "open_source_contributions": []
+  },
+  "languages": [
+    {
+      "name": "Spanish",
+      "proficiency": "Native"
+    },
+    {
+      "name": "English",
+      "proficiency": "C1"
+    }
+  ],
+  "interests": ["Robotics mentoring", "Photography", "Chess"],
+  "work_preferences": {
+    "remote_work": true,
+    "in_person_work": true,
+    "open_to_relocation": true,
+    "willing_to_complete_assessments": true,
+    "willing_to_undergo_drug_tests": true,
+    "willing_to_undergo_background_checks": true
+  },
+  "availability": {
+    "notice_period": ""
+  },
+  "salary_expectations": {
+    "currency": "",
+    "range": {
+      "min": 0,
+      "max": 0
+    }
+  },
+  "legal_authorization": []
+}
+

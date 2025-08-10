@@ -25,13 +25,13 @@ const BlogList = () => {
 
   return (
     <section id='blog' className='py-16'>
-      <div className='max-w-4xl mx-auto px-4'>
-        <h2 className='text-3xl font-bold mb-8'>Latest Posts</h2>
+      <div className='mx-auto max-w-4xl px-4'>
+        <h2 className='mb-8 text-3xl font-bold'>Latest Posts</h2>
         <div className='space-y-8'>
           {posts.map((post) => (
-            <article key={post.title} className='bg-gray-100 dark:bg-gray-800 rounded-lg p-6 hover:shadow-lg transition-shadow'>
-              <h3 className='text-xl font-semibold mb-2'>{post.title}</h3>
-              <p className='text-gray-600 dark:text-gray-300 mb-4'>{post.excerpt}</p>
+            <article key={post.title} className='rounded-lg bg-gray-100 p-6 transition-shadow hover:shadow-lg dark:bg-gray-800'>
+              <h3 className='mb-2 text-xl font-semibold'>{post.title}</h3>
+              <p className='mb-4 text-gray-600 dark:text-gray-300'>{post.excerpt}</p>
               <div className='flex items-center text-sm text-gray-500 dark:text-gray-400'>
                 <span>{post.date}</span>
                 <span className='mx-2'>•</span>

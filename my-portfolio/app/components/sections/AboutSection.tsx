@@ -4,9 +4,9 @@
 const AboutSection = () => {
   return (
     <section id='about' className='py-16'>
-      <div className='max-w-4xl mx-auto px-4'>
-        <h2 className='text-3xl font-bold mb-8'>About Me</h2>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+      <div className='mx-auto max-w-4xl px-4'>
+        <h2 className='mb-8 text-3xl font-bold'>About Me</h2>
+        <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
           <div className='space-y-4'>
             <p className='text-lg text-gray-600 dark:text-gray-300'>
               Hi, I&apos;m a passionate developer with expertise in building
@@ -19,9 +19,9 @@ const AboutSection = () => {
               complex problems.
             </p>
           </div>
-          <div className='bg-gray-100 dark:bg-gray-800 rounded-lg p-6'>
-            <h3 className='text-xl font-semibold mb-4'>Skills</h3>
-            <ul className='list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300'>
+          <div className='rounded-lg bg-gray-100 p-6 dark:bg-gray-800'>
+            <h3 className='mb-4 text-xl font-semibold'>Skills</h3>
+            <ul className='list-inside list-disc space-y-2 text-gray-600 dark:text-gray-300'>
               <li>Frontend Development</li>
               <li>React & Next.js</li>
               <li>TypeScript</li>
