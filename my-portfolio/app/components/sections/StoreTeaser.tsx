@@ -15,9 +15,9 @@ const StoreTeaser = () => {
     <section id='store' className='py-16'>
       <div className='mx-auto max-w-4xl px-4'>
         <h2 className='mb-8 text-3xl font-bold'>{t('sections.store.title')}</h2>
-        <div className='rounded-lg bg-gray-100 p-8 text-center dark:bg-gray-800'>
+        <div className='rounded-lg bg-[var(--card-bg)] p-8 text-center'>
           <h3 className='mb-4 text-2xl font-semibold'>Coming Soon</h3>
-          <p className='text-gray-600 dark:text-gray-300'>
+          <p className='text-[var(--text-secondary)]'>
             {portal.store.description || t('sections.store.description')}
           </p>
         </div>

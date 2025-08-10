@@ -34,11 +34,11 @@ const AboutSection = () => {
               </Link>
             </div>
           </div>
-          <div className='rounded-lg bg-gray-100 p-6 dark:bg-gray-800'>
+          <div className='rounded-lg bg-[var(--card-bg)] p-6'>
             <h3 className='mb-4 text-xl font-semibold'>Skills</h3>
-            <div className='flex flex-wrap gap-2 text-sm text-gray-600 dark:text-gray-300'>
+            <div className='flex flex-wrap gap-2 text-sm text-[var(--text-secondary)]'>
               {portal.about.skills.slice(0, 10).map((skill) => (
-                <span key={skill} className='rounded-full bg-gray-200 px-3 py-1 dark:bg-gray-700'>
+                <span key={skill} className='rounded-full bg-[var(--chip-button)] px-3 py-1'>
                   {skill}
                 </span>
               ))}

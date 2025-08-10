@@ -229,10 +229,10 @@ const ResumePage = async ({ searchParams, params }: PageProps) => {
         </div>
       </header>
 
-      <p className="text-sm text-gray-600">
+      <p className="text-sm text-[var(--text-secondary)]">
           {location.city}, {location.state_region}, {location.country}
         </p>
-        <p className="text-sm text-gray-600">{email}</p>
+        <p className="text-sm text-[var(--text-secondary)]">{email}</p>
         <div className="mt-2 flex flex-wrap gap-4 text-sm">
           {portfolio_url && (
             <a className="text-[var(--brand-accent)] underline" href={portfolio_url} target="_blank" rel="noreferrer">
@@ -278,7 +278,7 @@ const ResumePage = async ({ searchParams, params }: PageProps) => {
             <h3 className="font-bold">
               {exp.position} | {exp.company}
             </h3>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-[var(--text-secondary)]">
               {exp.location} • {formatEmploymentPeriod(exp.employment_period)} • {exp.industry}
             </p>
             {exp.responsibilities?.length > 0 && (
@@ -314,7 +314,7 @@ const ResumePage = async ({ searchParams, params }: PageProps) => {
           <div key={idx} className="mb-4">
             <p className="font-bold">{edu.degree_title}</p>
             <p>{edu.institution} • {edu.location}</p>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-[var(--text-secondary)]">
               {edu.start_date} - {edu.end_date} • {edu.degree_level} • {edu.final_evaluation_grade}
             </p>
             {edu.certifications?.length > 0 && (

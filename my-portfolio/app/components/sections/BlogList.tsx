@@ -19,10 +19,10 @@ const BlogList = () => {
         <h2 className='mb-8 text-3xl font-bold'>{t('sections.blog.title')}</h2>
         <div className='space-y-8'>
           {posts.map((post) => (
-            <article key={post.title} className='rounded-lg bg-gray-100 p-6 transition-shadow hover:shadow-lg dark:bg-gray-800'>
+            <article key={post.title} className='rounded-lg bg-[var(--card-bg)] p-6 transition-shadow hover:shadow-lg'>
               <h3 className='mb-2 text-xl font-semibold'>{post.title}</h3>
-              <p className='mb-4 text-gray-600 dark:text-gray-300'>{post.excerpt}</p>
-              <div className='flex items-center text-sm text-gray-500 dark:text-gray-400'>
+              <p className='mb-4 text-[var(--text-secondary)]'>{post.excerpt}</p>
+              <div className='flex items-center text-sm text-[var(--text-secondary)]'>
                 <span>{post.date}</span>
                 <span className='mx-2'>•</span>
                 <span>{post.readTime}</span>

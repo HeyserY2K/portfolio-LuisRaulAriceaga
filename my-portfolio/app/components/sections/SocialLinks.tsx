@@ -25,7 +25,7 @@ const SocialLinks = () => {
               href={link.url}
               target='_blank'
               rel='noopener noreferrer'
-              className='flex items-center justify-center rounded-lg bg-gray-100 p-6 transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700'
+              className='flex items-center justify-center rounded-lg bg-[var(--card-bg)] p-6 transition-colors hover:opacity-90'
             >
               <span className='mr-2 text-2xl'>{link.icon}</span>
               <span className='font-medium'>{link.name}</span>
