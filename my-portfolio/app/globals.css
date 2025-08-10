@@ -4,23 +4,42 @@
 
 :root {
   /* Light mode colors */
-  --light-header-bg: #FDFFFD;
-  --light-background: #FDFFFD;
-  --light-card-bg: #F3F5F9;
-  --light-chip-button: #FFFAFA;
-  --light-text-primary: #1F1E1D;
-  --light-text-secondary: #4A4A4A;
+  --light-header-bg: #fdfffd;
+  --light-background: #fdfffd;
+  --light-card-bg: #f3f5f9;
+  --light-chip-button: #fffafa;
+  --light-text-primary: #1f1e1d;
+  --light-text-secondary: #4a4a4a;
   --light-brand-accent: #8d69bb;
-  
+
+  /* Brand & accent RGB (used by gradients and glass) */
+  --accent-primary-rgb: 141 105 187; /* purple */
+  --accent-secondary-rgb: 99 102 241; /* indigo */
+  --accent-tertiary-rgb: 56 189 248; /* aqua/sky */
+  --accent-fuchsia-rgb: 236 72 153; /* fuchsia */
+  --accent-contrast-rgb: 204 44 44; /* Persian Red (#CC2C2C) */
+
   /* Dark mode colors */
-  --dark-header-bg: #2C2926;
-  --dark-background: #1F1E1D;
-  --dark-card-bg: #2F2C30;
+  --dark-header-bg: #2c2926;
+  --dark-background: #1f1e1d;
+  --dark-card-bg: #2f2c30;
   --dark-chip-button: #464049;
   --dark-text-primary: #fafafa;
-  --dark-text-secondary: #D1D1D1;
-  --dark-brand-accent: #76589D;
-  
+  --dark-text-secondary: #d1d1d1;
+  --dark-brand-accent: #76589d;
+
+  /* Glass tokens */
+  --glass-rgb: 255 255 255; /* base tint for glass surfaces */
+  --glass-alpha: 0.1; /* subtle translucency */
+  --glass-alpha-strong: 0.16;
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-highlight-strength: 0.12;
+  --glass-shadow-strength: 0.15;
+  --glass-shadow-strong: 0.2;
+
+  /* Grain (simple CSS pattern) */
+  --grain-data-url: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+
   /* Default to light mode */
   --header-bg: var(--light-header-bg);
   --background: var(--light-background);
@@ -41,11 +60,122 @@
     --text-primary: var(--dark-text-primary);
     --text-secondary: var(--dark-text-secondary);
     --brand-accent: var(--dark-brand-accent);
+
+    /* Dark adjustments for glass */
+    --glass-rgb: 10 10 10;
+    --glass-alpha: 0.22;
+    --glass-alpha-strong: 0.28;
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-highlight-strength: 0.1;
+    --glass-shadow-strength: 0.35;
+    --glass-shadow-strong: 0.45;
   }
 }
 
 body {
   color: var(--text-primary);
-  background: var(--background);
+  background:
+    radial-gradient(
+      1200px 800px at 100% -10%,
+      rgb(var(--accent-tertiary-rgb) / 0.12),
+      transparent 70%
+    ),
+    radial-gradient(
+      1000px 700px at -10% 10%,
+      rgb(var(--accent-secondary-rgb) / 0.1),
+      transparent 70%
+    ),
+    var(--background);
   font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* DVD-style roaming: separate X/Y animations so blobs traverse full viewport and bounce */
+@keyframes dvdX {
+  from {
+    transform: translateX(-45vw);
+  }
+  to {
+    transform: translateX(45vw);
+  }
+}
+@keyframes dvdY {
+  from {
+    transform: translateY(-38vh);
+  }
+  to {
+    transform: translateY(38vh);
+  }
+}
+
+.dvd-x-1 {
+  animation: dvdX 24s linear infinite alternate;
+  will-change: transform;
+}
+.dvd-x-2 {
+  animation: dvdX 28s linear infinite alternate;
+  will-change: transform;
+}
+.dvd-x-3 {
+  animation: dvdX 32s linear infinite alternate;
+  will-change: transform;
+}
+.dvd-x-4 {
+  animation: dvdX 30s linear infinite alternate;
+  will-change: transform;
+}
+.dvd-x-5 {
+  animation: dvdX 26s linear infinite alternate;
+  will-change: transform;
+}
+
+.dvd-y-1 {
+  animation: dvdY 19s linear infinite alternate;
+  will-change: transform;
+}
+.dvd-y-2 {
+  animation: dvdY 21s linear infinite alternate;
+  will-change: transform;
+}
+.dvd-y-3 {
+  animation: dvdY 23s linear infinite alternate;
+  will-change: transform;
+}
+.dvd-y-4 {
+  animation: dvdY 25s linear infinite alternate;
+  will-change: transform;
+}
+.dvd-y-5 {
+  animation: dvdY 27s linear infinite alternate;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dvd-x-1,
+  .dvd-x-2,
+  .dvd-x-3,
+  .dvd-x-4,
+  .dvd-x-5,
+  .dvd-y-1,
+  .dvd-y-2,
+  .dvd-y-3,
+  .dvd-y-4,
+  .dvd-y-5 {
+    animation: none !important;
+  }
+}
+
+/* Reduced motion friendly transitions */
+* {
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }

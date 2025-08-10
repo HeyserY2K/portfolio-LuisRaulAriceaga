@@ -1,10 +1,12 @@
 "use client";
 
 import Link from 'next/link';
-import { useI18n } from '../../i18n/I18nProvider';
+import Section from '@/app/components/ui/Section';
+import GlassPanel from '@/app/components/ui/GlassPanel';
 import portalEn from '@/data/portal-en.json';
 import portalEs from '@/data/portal-es.json';
 import type { PortalData, PortalSocialLink } from '@/types/portal';
+import { useI18n } from '../../i18n/I18nProvider';
 
 /**
  * Social Links Section (reusable)
@@ -15,25 +17,24 @@ const SocialLinks = () => {
   const socialLinks: PortalSocialLink[] = portal.social.links;
 
   return (
-    <section id='social' className='py-16'>
-      <div className='mx-auto max-w-4xl px-4'>
-        <h2 className='mb-8 text-3xl font-bold'>{t('sections.social.title')}</h2>
-        <div className='grid grid-cols-1 gap-6 md:grid-cols-3'>
-          {socialLinks.map((link) => (
+    <Section id='social'>
+      <h2 className='mb-8 text-3xl font-bold'>{t('sections.social.title')}</h2>
+      <div className='grid grid-cols-1 gap-6 md:grid-cols-3'>
+        {socialLinks.map((link) => (
+          <GlassPanel key={link.name} className='p-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(0,0,0,var(--glass-shadow-strong))]'>
             <Link
-              key={link.name}
               href={link.url}
               target='_blank'
               rel='noopener noreferrer'
-              className='flex items-center justify-center rounded-lg bg-[var(--card-bg)] p-6 transition-colors hover:opacity-90'
+              className='flex items-center justify-center gap-2'
             >
-              <span className='mr-2 text-2xl'>{link.icon}</span>
+              <span className='text-2xl'>{link.icon}</span>
               <span className='font-medium'>{link.name}</span>
             </Link>
-          ))}
-        </div>
+          </GlassPanel>
+        ))}
       </div>
-    </section>
+    </Section>
   );
 };
 

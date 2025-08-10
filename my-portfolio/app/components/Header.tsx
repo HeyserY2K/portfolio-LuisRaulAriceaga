@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { useI18n } from '../i18n/I18nProvider';
 
@@ -10,7 +11,7 @@ const Header = () => {
 
   return (
     <header
-      className="flex w-full items-center justify-between bg-[var(--header-bg)] px-8 py-4 shadow-md"
+      className="sticky top-4 z-40 mx-auto flex w-[min(100%,_1200px)] items-center justify-between rounded-full border border-[color:var(--glass-border)] bg-[rgb(var(--glass-rgb)_/_var(--glass-alpha))] px-6 py-3 shadow-[0_8px_24px_rgba(0,0,0,var(--glass-shadow-strength))] backdrop-blur-[12px]"
       aria-label={t('nav.aria.main')}
     >
       <Link href={prefix} aria-label={t('nav.aria.home')}>
