@@ -2,8 +2,6 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
 import './globals.css';
-import Footer from './components/layout/Footer';
-import Header from './components/layout/Header';
 
 /**
  * Configure fonts with custom variables for global use.
@@ -53,9 +51,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <html lang='en'>
       <body className={`${inter.variable} bg-[var(--background)] text-[var(--text-primary)] antialiased`}>
-        <Header />
-        <main className='container mx-auto p-6 sm:p-12'>{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );

@@ -1,0 +1,74 @@
+{
+  "profile": {
+    "name": "Luis Raul Ariceaga",
+    "email": "luisra.heyser@gmail.com",
+    "location": { "city": "Monterrey", "state_region": "Nuevo León", "country": "México" }
+  },
+  "about": {
+    "summary": "Ingeniero Frontend y Estratega UX con más de cinco años de experiencia transformando objetivos de negocio en soluciones digitales sofisticadas y de alto rendimiento.",
+    "skills": [
+      "Desarrollo Frontend",
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Diseño UI/UX",
+      "Optimización de Rendimiento"
+    ]
+  },
+  "projects": {
+    "featured": [
+      {
+        "title": "Plataforma E-commerce",
+        "description": "Solución e-commerce full-stack construida con Next.js y TypeScript",
+        "tech": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+        "link": "#"
+      },
+      {
+        "title": "App de Gestión de Tareas",
+        "description": "Herramienta colaborativa de gestión de tareas con actualizaciones en tiempo real",
+        "tech": ["React", "Node.js", "Socket.io", "MongoDB"],
+        "link": "#"
+      },
+      {
+        "title": "Sitio de Portafolio",
+        "description": "Sitio moderno de portafolio mostrando proyectos y habilidades",
+        "tech": ["Next.js", "TypeScript", "Tailwind CSS"],
+        "link": "#"
+      }
+    ]
+  },
+  "blog": {
+    "posts": [
+      {
+        "title": "Primeros Pasos con Next.js",
+        "excerpt": "Aprende a crear aplicaciones web modernas con Next.js y React",
+        "date": "2024-03-15",
+        "readTime": "5 min"
+      },
+      {
+        "title": "Buenas Prácticas de TypeScript",
+        "excerpt": "Patrones y prácticas esenciales de TypeScript para código limpio",
+        "date": "2024-03-10",
+        "readTime": "7 min"
+      },
+      {
+        "title": "Dominando Tailwind CSS",
+        "excerpt": "Trucos para estilizar eficientemente con Tailwind CSS",
+        "date": "2024-03-05",
+        "readTime": "6 min"
+      }
+    ]
+  },
+  "social": {
+    "links": [
+      { "name": "GitHub", "url": "https://github.com/lrariceaga", "icon": "📦" },
+      { "name": "LinkedIn", "url": "https://linkedin.com/in/lrariceaga", "icon": "💼" },
+      { "name": "Twitter", "url": "https://twitter.com/lrariceaga", "icon": "🐦" }
+    ]
+  },
+  "store": {
+    "description": "Próximamente: productos digitales, plantillas y recursos. ¡Mantente atento a novedades!"
+  }
+}
+
+

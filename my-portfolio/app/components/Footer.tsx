@@ -1,21 +1,18 @@
-import React from 'react';
+"use client";
 
-/**
- * Footer Component
- *
- * Displays the footer section of the portfolio with copyright information.
- *
- * @returns {JSX.Element} The Footer component
- */
+import React from 'react';
+import { useI18n } from '../i18n/I18nProvider';
+
 const Footer = () => {
+  const { t } = useI18n();
+  const year = new Date().getFullYear();
+  const text = t('footer.copyright', { year });
   return (
     <footer
       className='w-full bg-[var(--header-bg)] py-6 text-center text-[var(--text-primary)]'
-      aria-label='Footer'
+      aria-label={t('footer.aria.footer')}
     >
-      <p>
-        © {new Date().getFullYear()} Luis Raul&apos;s Portfolio. All rights reserved.
-      </p>
+      <p>{text}</p>
     </footer>
   );
 };

@@ -5,7 +5,7 @@
   },
   "nav": {
     "home": "Inicio",
-    "about": "Acerca",
+    "about": "Sobre mí",
     "blog": "Blog",
     "projects": "Proyectos",
     "store": "Tienda",
@@ -18,7 +18,7 @@
     "aria": {
       "main": "Navegación Principal",
       "home": "Ir al Inicio",
-      "about": "Acerca",
+      "about": "Sobre mí",
       "blog": "Blog",
       "projects": "Proyectos",
       "store": "Tienda",
@@ -43,7 +43,7 @@
       "summary": "Ingeniero Frontend y Estratega UX con más de cinco años de experiencia en transformar objetivos de negocio complejos en soluciones digitales sofisticadas y de alto rendimiento."
     },
     "about": {
-      "title": "Sobre Mí",
+      "title": "Sobre mí",
       "location": "Ubicación",
       "contact": "Información de Contacto",
       "languages": "Idiomas",
@@ -109,4 +109,3 @@
     }
   }
 }
-

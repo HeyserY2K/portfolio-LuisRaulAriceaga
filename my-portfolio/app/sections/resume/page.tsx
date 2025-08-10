@@ -204,13 +204,15 @@ const formatEmploymentPeriod = (period: EmploymentPeriod): string => {
 };
 
 type SearchParams = Record<string, string | string[] | undefined>;
-type PageProps = { searchParams?: Promise<SearchParams> };
+type PageProps = { searchParams?: Promise<SearchParams>; params?: Promise<Record<string, string>> };
 
-const ResumePage = async ({ searchParams }: PageProps) => {
+const ResumePage = async ({ searchParams, params }: PageProps) => {
   const sp: SearchParams = searchParams ? await searchParams : {};
   const langRaw = sp.lang;
   const langStr = Array.isArray(langRaw) ? langRaw[0] : langRaw;
-  const lang = (langStr === 'es' ? 'es' : 'en') as 'en' | 'es';
+  const resolvedParams = params ? await params : undefined;
+  const localeParam = resolvedParams?.locale;
+  const lang = ((langStr === 'es' || localeParam === 'es') ? 'es' : 'en') as 'en' | 'es';
   const resume = await getResumeData(lang);
   const t = translations[lang];
   const name = `${resume.personal_information.first_name} ${resume.personal_information.last_name}`;
@@ -221,9 +223,9 @@ const ResumePage = async ({ searchParams }: PageProps) => {
       <header className="mb-6 flex items-start justify-between gap-4">
         <h1 className="mb-1 text-3xl font-bold">{name}</h1>
         <div className="flex items-center gap-2 text-sm">
-          <Link href="/sections/resume?lang=en" className={lang === 'en' ? 'font-semibold underline' : 'hover:underline'}>EN</Link>
+          <Link href={`/en/sections/resume`} className={lang === 'en' ? 'font-semibold underline' : 'hover:underline'}>EN</Link>
           <span>·</span>
-          <Link href="/sections/resume?lang=es" className={lang === 'es' ? 'font-semibold underline' : 'hover:underline'}>ES</Link>
+          <Link href={`/es/sections/resume`} className={lang === 'es' ? 'font-semibold underline' : 'hover:underline'}>ES</Link>
         </div>
       </header>
 

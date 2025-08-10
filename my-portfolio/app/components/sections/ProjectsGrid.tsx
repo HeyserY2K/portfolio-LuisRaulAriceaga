@@ -1,32 +1,22 @@
+"use client";
+
+import { useI18n } from '../../i18n/I18nProvider';
+import portalEn from '@/data/portal-en.json';
+import portalEs from '@/data/portal-es.json';
+import type { PortalData, PortalProject } from '@/types/portal';
+
 /**
  * Projects Grid Section (reusable)
  */
 const ProjectsGrid = () => {
-  const projects = [
-    {
-      title: 'E-commerce Platform',
-      description: 'A full-stack e-commerce solution built with Next.js and TypeScript',
-      tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL'],
-      link: '#',
-    },
-    {
-      title: 'Task Management App',
-      description: 'A collaborative task management tool with real-time updates',
-      tech: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
-      link: '#',
-    },
-    {
-      title: 'Portfolio Website',
-      description: 'A modern portfolio website showcasing projects and skills',
-      tech: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-      link: '#',
-    },
-  ];
+  const { t, locale } = useI18n();
+  const portal = (locale === 'es' ? portalEs : portalEn) as PortalData;
+  const projects: PortalProject[] = portal.projects.featured;
 
   return (
     <section id='projects' className='py-16'>
       <div className='mx-auto max-w-4xl px-4'>
-        <h2 className='mb-8 text-3xl font-bold'>Featured Projects</h2>
+        <h2 className='mb-8 text-3xl font-bold'>{t('sections.projects.title')}</h2>
         <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
           {projects.map((project) => (
             <div key={project.title} className='rounded-lg bg-gray-100 p-6 transition-shadow hover:shadow-lg dark:bg-gray-800'>
