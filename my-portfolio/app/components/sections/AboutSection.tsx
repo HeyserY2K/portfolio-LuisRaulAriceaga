@@ -16,13 +16,13 @@ import { useI18n } from '../../i18n/I18nProvider';
 const AboutSection = () => {
   const { t, locale } = useI18n();
   const portal = (locale === 'es' ? portalEs : portalEn) as PortalData;
-  const name = portal.profile.name;
+  // const name = portal.profile.name;
   const summary = portal.about.summary;
   const { email, location } = portal.profile;
   return (
     <Section id="about">
       <h2 className="mb-2 text-3xl font-bold">{t('sections.about.title')}</h2>
-      <p className="mb-8 text-[var(--text-secondary)]">{name}</p>
+      {/* <p className="mb-8 text-[var(--text-secondary)]">{name}</p> */}
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         <div className="space-y-4">
           <p className="text-lg text-[var(--text-secondary)]">{summary}</p>

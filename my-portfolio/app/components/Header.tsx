@@ -35,13 +35,13 @@ const Header = () => {
 
       <nav aria-label={t('nav.aria.main')}>
         <ul className="flex items-center gap-6">
-          <li>
+          {/* <li>
             <Link href={prefix} aria-label={t('nav.aria.home')}>
               <span className="text-[var(--text-primary)] hover:text-[var(--brand-accent)]">
                 {t('nav.home')}
               </span>
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href={`${prefix}/sections/resume`} aria-label={t('nav.aria.resume')}>
               <span className="text-[var(--text-primary)] hover:text-[var(--brand-accent)]">
