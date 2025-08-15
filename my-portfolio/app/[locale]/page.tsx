@@ -1,8 +1,8 @@
 import Hero from '../components/sections/Hero';
 import AboutSection from '../components/sections/AboutSection';
-import BlogList from '../components/sections/BlogList';
+// import BlogList from '../components/sections/BlogList'; //TODO: Disabled, future development
 import ProjectsGrid from '../components/sections/ProjectsGrid';
-import StoreTeaser from '../components/sections/StoreTeaser';
+// import StoreTeaser from '../components/sections/StoreTeaser'; //TODO: Disabled, future development
 import SocialLinks from '../components/sections/SocialLinks';
 
 export default function Home() {
@@ -10,9 +10,9 @@ export default function Home() {
     <div className="flex flex-col gap-16">
       <Hero />
       <AboutSection />
-      <BlogList />
+      {/* <BlogList /> */}
       <ProjectsGrid />
-      <StoreTeaser />
+      {/* <StoreTeaser /> */}
       <SocialLinks />
     </div>
   );

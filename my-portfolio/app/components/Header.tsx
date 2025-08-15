@@ -35,6 +35,7 @@ const Header = () => {
 
       <nav aria-label={t('nav.aria.main')}>
         <ul className="flex items-center gap-6">
+          {/* #Disabled for better ux */}
           {/* <li>
             <Link href={prefix} aria-label={t('nav.aria.home')}>
               <span className="text-[var(--text-primary)] hover:text-[var(--brand-accent)]">
@@ -56,13 +57,14 @@ const Header = () => {
               </span>
             </Link>
           </li>
-          <li>
+          {/* #Disabled, future development */}
+          {/* <li>
             <Link href={`${prefix}/sections/blog`} aria-label={t('nav.aria.blog')}>
               <span className="text-[var(--text-primary)] hover:text-[var(--brand-accent)]">
                 {t('nav.blog')}
               </span>
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href={`${prefix}/sections/projects`} aria-label={t('nav.aria.projects')}>
               <span className="text-[var(--text-primary)] hover:text-[var(--brand-accent)]">
@@ -70,13 +72,14 @@ const Header = () => {
               </span>
             </Link>
           </li>
-          <li>
+          {/* #Disabled, future development */}
+          {/* <li>
             <Link href={`${prefix}/sections/store`} aria-label={t('nav.aria.store')}>
               <span className="text-[var(--text-primary)] hover:text-[var(--brand-accent)]">
                 {t('nav.store')}
               </span>
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href={`${prefix}/sections/social`} aria-label={t('nav.aria.social')}>
               <span className="text-[var(--text-primary)] hover:text-[var(--brand-accent)]">
