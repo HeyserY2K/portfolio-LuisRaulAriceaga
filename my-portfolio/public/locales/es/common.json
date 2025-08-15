@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Luis Raul Ariceaga - Portafolio",
-    "description": "Ingeniero Frontend y Estratega UX con experiencia en transformar objetivos de negocio en soluciones digitales de alto rendimiento"
+    "description": "Full Stack Developer y Application Support Engineer, enfocado en anticipar necesidades, mejorar experiencias de usuarios y actuar con empatía y agilidad en entornos productivos."
   },
   "nav": {
     "home": "Inicio",
@@ -39,8 +39,11 @@
   "sections": {
     "hero": {
       "greeting": "Hola, soy",
-      "role": "Desarrollador Frontend y Diseñador UI",
-      "summary": "Ingeniero Frontend y Estratega UX con más de cinco años de experiencia en transformar objetivos de negocio complejos en soluciones digitales sofisticadas y de alto rendimiento."
+      "role": "Full Stack Developer & Application Support Engineer",
+      "summary": "Ingeniero Full Stack con más de cinco años de experiencia optimizando sistemas y anticipando necesidades antes de que se manifiesten. Comprometido con mejorar la experiencia del usuario, articular soluciones claras y actuar con rapidez, siempre con empatía e inclusión.",
+      "availability": "Senior frontend y liderazgo UX",
+      "viewResume": "Ver Currículum",
+      "emailCta": "Escríbeme"
     },
     "about": {
       "title": "Sobre mí",
@@ -48,7 +51,7 @@
       "contact": "Información de Contacto",
       "languages": "Idiomas",
       "interests": "Intereses",
-      "description": "Mostrando mis proyectos, blog y futura tienda."
+      "description": "Apasionado por entender profundamente al usuario, proponer mejoras proactivas, transformar ideas en realidades eficientes y fomentar un entorno colaborativo inclusivo."
     },
     "blog": {
       "title": "Blog",
@@ -56,7 +59,7 @@
     },
     "projects": {
       "title": "Proyectos",
-      "description": "Una muestra de mi trabajo reciente y contribuciones."
+      "description": "Una muestra de mi trabajo donde me enfoco en crear soluciones prácticas y mejorar la experiencia de los usuarios."
     },
     "store": {
       "title": "Tienda",
@@ -73,9 +76,27 @@
       "current": "Presente",
       "location": "Ubicación",
       "industry": "Industria",
-      "responsibilities": "Responsabilidades Principales",
-      "achievements": "Logros Principales",
-      "technologies": "Tecnologías Utilizadas"
+      "responsibilities": [
+        "Integré asistentes personalizados con GPT/Claude/Gemini para automatizar flujos, manejo de errores y documentación.",
+        "Implementé resúmenes estructurados de reuniones con LLMs para mejorar comunicación y productividad.",
+        "Diseñé y desarrollé interfaces escalables y centradas en el usuario con React y TypeScript usando Figma.",
+        "Diseñé, programé y probé funcionalidades para un LMS (Laravel) y UX/UI para app móvil de jueces WER.",
+        "Coordiné y formé jueces en torneos de robótica a nivel estatal.",
+        "Elaboré 140+ planogramas y actué como enlace entre equipos para alinear expectativas de workflow.",
+        "Contribuí a cambios en la wishlist de homedepot.com y colaboré en equipos Scrum."
+      ],
+      "achievements": [
+        "Automaticé documentación y resúmenes de reuniones, reduciendo la carga de coordinación.",
+        "Creé un wireframe funcional que aceleró la evaluación de jueces en torneos de robótica.",
+        "Entregué 140+ planogramas en 15+ departamentos y lideré presentaciones de estandarización.",
+        "Realicé cambios en producción (wishlist) y completé 20+ cursos especializados."
+      ],
+      "technologies": [
+        "React, TypeScript, Node.js, Python",
+        "Laravel, MUI, Tailwind CSS, Figma",
+        "GPT, Claude, Gemini (LLMs)",
+        "AWS Rekognition, GCP (Cloud Functions básico)"
+      ]
     },
     "education": {
       "title": "Educación",
@@ -85,12 +106,12 @@
     },
     "skills": {
       "title": "Habilidades",
-      "programming": "Lenguajes de Programación",
+      "programming": "JavaScript, Python, TypeScript",
       "frameworks": "Frameworks y Librerías",
       "tools": "Herramientas y Plataformas",
       "databases": "Bases de Datos",
-      "cloud": "Servicios en la Nube",
-      "methodologies": "Metodologías",
+      "cloud": "AWS, Monitoring & CI/CD",
+      "methodologies": "Scrum, Kanban, ITIL (soporte y operación)",
       "proficiency": {
         "beginner": "Básico",
         "intermediate": "Intermedio",

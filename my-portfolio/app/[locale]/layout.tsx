@@ -2,10 +2,11 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import I18nProvider from '../i18n/I18nProvider';
-
-import '../globals.css';
 import Footer from '../components/layout/Footer';
 import Header from '../components/layout/Header';
+import GradientBackground from '../components/ui/GradientBackground';
+
+import '../globals.css';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -51,15 +52,18 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${inter.variable} bg-[var(--background)] text-[var(--text-primary)] antialiased`}>
+      <body
+        className={`${inter.variable} bg-[var(--background)] text-[var(--text-primary)] antialiased relative min-h-screen`}
+      >
+        <GradientBackground />
         <I18nProvider locale={locale} messages={messages}>
-          <Header />
-          <main className='container mx-auto p-6 sm:p-12'>{children}</main>
+          <div className="px-4 sm:px-6">
+            <Header />
+          </div>
+          <main className="container mx-auto p-6 sm:p-12">{children}</main>
           <Footer />
         </I18nProvider>
       </body>
     </html>
   );
 }
-
-

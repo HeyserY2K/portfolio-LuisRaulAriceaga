@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Luis Raul Ariceaga - Portfolio",
-    "description": "Frontend Engineer and UX Strategist with experience in transforming business objectives into high-performance digital solutions"
+    "description": "Full-stack Developer & Application Support Engineer focused on anticipating needs, improving UX, and acting with empathy and speed."
   },
   "nav": {
     "home": "Home",
@@ -39,8 +39,11 @@
   "sections": {
     "hero": {
       "greeting": "Hi, I'm",
-      "role": "Frontend Developer & UI Designer",
-      "summary": "Accomplished Frontend Engineer and UX Strategist with over five years of experience in transforming intricate business objectives into sophisticated, high-performance digital solutions."
+      "role": "Full Stack Developer & Application Support Engineer",
+      "summary": "Full-stack engineer (5+ yrs) optimizing systems, anticipating needs, and improving UX — fast, clear, empathetic.",
+      "availability": "Senior full-stack & UX-led roles",
+      "viewResume": "View Resume",
+      "emailCta": "Email Me"
     },
     "about": {
       "title": "About Me",
@@ -48,7 +51,7 @@
       "contact": "Contact Information",
       "languages": "Languages",
       "interests": "Interests",
-      "description": "Showcasing my projects, blog, and future store."
+      "description": "Deep user understanding, proactive improvements, efficient execution, and inclusive collaboration."
     },
     "blog": {
       "title": "Blog",
@@ -56,7 +59,7 @@
     },
     "projects": {
       "title": "Projects",
-      "description": "A showcase of my recent work and contributions."
+      "description": "A showcase of my work where I focus on creating practical solutions and improving user experience."
     },
     "store": {
       "title": "Store",
@@ -73,9 +76,27 @@
       "current": "Present",
       "location": "Location",
       "industry": "Industry",
-      "responsibilities": "Key Responsibilities",
-      "achievements": "Key Achievements",
-      "technologies": "Technologies Used"
+      "responsibilities": [
+        "Integrated GPT/Claude/Gemini assistants to automate workflows, error handling, and docs.",
+        "Built structured meeting summaries with LLMs to improve team communication and productivity.",
+        "Designed and developed scalable, user‑centric UIs with React + TypeScript using Figma.",
+        "Shipped LMS features in Laravel and UX/UI for a WER judges mobile app.",
+        "Coordinated and trained judges for state‑level robotics tournaments.",
+        "Delivered 140+ planograms and aligned expectations across teams as liaison.",
+        "Contributed wishlist changes on homedepot.com and worked within Scrum teams."
+      ],
+      "achievements": [
+        "Automated documentation and meeting notes, reducing coordination overhead.",
+        "Built a functional wireframe that sped up judges’ scoring in robotics tournaments.",
+        "Delivered 140+ planograms across 15+ departments and led standardization presentations.",
+        "Pushed production wishlist changes and completed 20+ specialized courses."
+      ],
+      "technologies": [
+        "React, TypeScript, Node.js, Python",
+        "Laravel, MUI, Tailwind CSS, Figma",
+        "GPT, Claude, Gemini (LLMs)",
+        "AWS Rekognition, GCP (basic Cloud Functions)"
+      ]
     },
     "education": {
       "title": "Education",
@@ -85,12 +106,12 @@
     },
     "skills": {
       "title": "Skills",
-      "programming": "Programming Languages",
+      "programming": "JavaScript, Python, TypeScript",
       "frameworks": "Frameworks & Libraries",
       "tools": "Tools & Platforms",
       "databases": "Databases",
-      "cloud": "Cloud Services",
-      "methodologies": "Methodologies",
+      "cloud": "AWS, Monitoring & CI/CD",
+      "methodologies": "Scrum, Kanban, ITIL (support & operations)",
       "proficiency": {
         "beginner": "Beginner",
         "intermediate": "Intermediate",
@@ -109,4 +130,3 @@
     }
   }
 }
-

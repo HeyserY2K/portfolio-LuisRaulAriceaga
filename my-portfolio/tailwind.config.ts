@@ -12,6 +12,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        brand: {
+          primary: "rgb(var(--accent-primary-rgb))",
+          secondary: "rgb(var(--accent-secondary-rgb))",
+          tertiary: "rgb(var(--accent-tertiary-rgb))",
+          contrast: "rgb(var(--accent-contrast-rgb))",
+        },
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
@@ -24,6 +30,9 @@ export default {
           lg: '3rem',
           xl: '4rem',
         },
+      },
+      boxShadow: {
+        glass: '0 10px 30px rgba(0,0,0,var(--glass-shadow-strength))',
       },
     },
   },
