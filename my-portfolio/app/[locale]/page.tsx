@@ -7,7 +7,7 @@ import SocialLinks from '../components/sections/SocialLinks';
 
 export default function Home() {
   return (
-    <div className='flex flex-col gap-16'>
+    <div className="flex flex-col gap-16">
       <Hero />
       <AboutSection />
       <BlogList />
@@ -17,5 +17,3 @@ export default function Home() {
     </div>
   );
 }
-
-

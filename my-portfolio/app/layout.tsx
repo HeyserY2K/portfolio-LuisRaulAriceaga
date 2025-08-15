@@ -15,9 +15,7 @@ const inter = Inter({
  * Metadata for SEO and social sharing.
  */
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
-  ),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
   title: {
     default: 'My Portfolio - Luis Raul Ariceaga',
     template: '%s | Luis Raul Ariceaga',
@@ -49,8 +47,10 @@ export const metadata: Metadata = {
  */
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <html lang='en'>
-      <body className={`${inter.variable} bg-[var(--background)] text-[var(--text-primary)] antialiased`}>
+    <html lang="en">
+      <body
+        className={`${inter.variable} bg-[var(--background)] text-[var(--text-primary)] antialiased`}
+      >
         {children}
       </body>
     </html>

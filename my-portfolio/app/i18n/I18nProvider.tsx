@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { createContext, useContext, useMemo } from 'react';
 
@@ -68,5 +68,3 @@ export default function I18nProvider({
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }
-
-
