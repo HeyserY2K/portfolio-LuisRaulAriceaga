@@ -1,11 +1,10 @@
-"use client";
+'use client';
 
 import Link from 'next/link';
 import Section from '@/app/components/ui/Section';
 import GlassPanel from '@/app/components/ui/GlassPanel';
-import portalEn from '@/data/portal-en.json';
-import portalEs from '@/data/portal-es.json';
-import type { PortalData, PortalSocialLink } from '@/types/portal';
+import portalBundle from '@/data/portal.json';
+import type { PortalBundle, PortalData, PortalSocialLink } from '@/types/portal';
 import { useI18n } from '../../i18n/I18nProvider';
 
 /**
@@ -13,23 +12,27 @@ import { useI18n } from '../../i18n/I18nProvider';
  */
 const SocialLinks = () => {
   const { t, locale } = useI18n();
-  const portal = (locale === 'es' ? portalEs : portalEn) as PortalData;
+  const bundle = portalBundle as PortalBundle;
+  const portal = (bundle[locale as 'en' | 'es'] ?? bundle.en) as PortalData;
   const socialLinks: PortalSocialLink[] = portal.social.links;
 
   return (
-    <Section id='social'>
-      <h2 className='mb-8 text-3xl font-bold'>{t('sections.social.title')}</h2>
-      <div className='grid grid-cols-1 gap-6 md:grid-cols-3'>
+    <Section id="social">
+      <h2 className="mb-8 text-3xl font-bold">{t('sections.social.title')}</h2>
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
         {socialLinks.map((link) => (
-          <GlassPanel key={link.name} className='p-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(0,0,0,var(--glass-shadow-strong))]'>
+          <GlassPanel
+            key={link.name}
+            className="p-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(0,0,0,var(--glass-shadow-strong))]"
+          >
             <Link
               href={link.url}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='flex items-center justify-center gap-2'
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2"
             >
-              <span className='text-2xl'>{link.icon}</span>
-              <span className='font-medium'>{link.name}</span>
+              <span className="text-2xl">{link.icon}</span>
+              <span className="font-medium">{link.name}</span>
             </Link>
           </GlassPanel>
         ))}
@@ -39,5 +42,3 @@ const SocialLinks = () => {
 };
 
 export default SocialLinks;
-
-

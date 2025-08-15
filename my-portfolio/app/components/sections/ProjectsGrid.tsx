@@ -2,9 +2,8 @@
 
 import Section from '@/app/components/ui/Section';
 import GlassPanel from '@/app/components/ui/GlassPanel';
-import portalEn from '@/data/portal-en.json';
-import portalEs from '@/data/portal-es.json';
-import type { PortalData, PortalProject } from '@/types/portal';
+import portalBundle from '@/data/portal.json';
+import type { PortalBundle, PortalData, PortalProject } from '@/types/portal';
 import { useI18n } from '../../i18n/I18nProvider';
 
 /**
@@ -12,7 +11,8 @@ import { useI18n } from '../../i18n/I18nProvider';
  */
 const ProjectsGrid = () => {
   const { t, locale } = useI18n();
-  const portal = (locale === 'es' ? portalEs : portalEn) as PortalData;
+  const bundle = portalBundle as PortalBundle;
+  const portal = (bundle[locale as 'en' | 'es'] ?? bundle.en) as PortalData;
   const projects: PortalProject[] = portal.projects.featured;
 
   return (
