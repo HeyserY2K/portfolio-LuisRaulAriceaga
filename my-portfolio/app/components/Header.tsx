@@ -7,14 +7,18 @@ import { useI18n } from '../i18n/I18nProvider';
 
 const Header = () => {
   const { locale, t } = useI18n();
-  const prefix = `/${locale}`;
+
+  // NOTE:
+  // - Next.js automatically handles `basePath` (so you should NOT prepend it).
+  // - For localized routes, explicitly add `/${locale}/...` in hrefs.
+  // - Keep prefix only if you build raw <a> or asset URLs (not for <Link>).
 
   return (
     <header
       className="sticky top-4 z-40 mx-auto flex w-[min(100%,_1200px)] items-center justify-between rounded-full border border-[color:var(--glass-border)] bg-[rgb(var(--glass-rgb)_/_var(--glass-alpha))] px-6 py-3 shadow-[0_8px_24px_rgba(0,0,0,var(--glass-shadow-strength))] backdrop-blur-[12px]"
       aria-label={t('nav.aria.main')}
     >
-      <Link href={prefix} aria-label={t('nav.aria.home')}>
+      <Link href={`/${locale}`} aria-label={t('nav.aria.home')}>
         <div className="group flex h-8 w-8 items-center justify-center hover:cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -37,21 +41,21 @@ const Header = () => {
         <ul className="flex items-center gap-6">
           {/* #Disabled for better ux */}
           {/* <li>
-            <Link href={prefix} aria-label={t('nav.aria.home')}>
+            <Link href={`/${locale}`} aria-label={t('nav.aria.home')}>
               <span className="text-[var(--text-primary)] hover:text-[var(--brand-accent)]">
                 {t('nav.home')}
               </span>
             </Link>
           </li> */}
           <li>
-            <Link href={`${prefix}/sections/resume`} aria-label={t('nav.aria.resume')}>
+            <Link href={`/${locale}/sections/resume`} aria-label={t('nav.aria.resume')}>
               <span className="text-[var(--text-primary)] hover:text-[var(--brand-accent)]">
                 {t('nav.resume')}
               </span>
             </Link>
           </li>
           <li>
-            <Link href={`${prefix}/sections/about`} aria-label={t('nav.aria.about')}>
+            <Link href={`/${locale}/sections/about`} aria-label={t('nav.aria.about')}>
               <span className="text-[var(--text-primary)] hover:text-[var(--brand-accent)]">
                 {t('nav.about')}
               </span>
@@ -59,14 +63,14 @@ const Header = () => {
           </li>
           {/* #Disabled, future development */}
           {/* <li>
-            <Link href={`${prefix}/sections/blog`} aria-label={t('nav.aria.blog')}>
+            <Link href={`/${locale}/sections/blog`} aria-label={t('nav.aria.blog')}>
               <span className="text-[var(--text-primary)] hover:text-[var(--brand-accent)]">
                 {t('nav.blog')}
               </span>
             </Link>
           </li> */}
           <li>
-            <Link href={`${prefix}/sections/projects`} aria-label={t('nav.aria.projects')}>
+            <Link href={`/${locale}/sections/projects`} aria-label={t('nav.aria.projects')}>
               <span className="text-[var(--text-primary)] hover:text-[var(--brand-accent)]">
                 {t('nav.projects')}
               </span>
@@ -74,14 +78,14 @@ const Header = () => {
           </li>
           {/* #Disabled, future development */}
           {/* <li>
-            <Link href={`${prefix}/sections/store`} aria-label={t('nav.aria.store')}>
+            <Link href={`/${locale}/sections/store`} aria-label={t('nav.aria.store')}>
               <span className="text-[var(--text-primary)] hover:text-[var(--brand-accent)]">
                 {t('nav.store')}
               </span>
             </Link>
           </li> */}
           <li>
-            <Link href={`${prefix}/sections/social`} aria-label={t('nav.aria.social')}>
+            <Link href={`/${locale}/sections/social`} aria-label={t('nav.aria.social')}>
               <span className="text-[var(--text-primary)] hover:text-[var(--brand-accent)]">
                 {t('nav.social')}
               </span>

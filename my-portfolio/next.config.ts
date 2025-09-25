@@ -1,48 +1,35 @@
 import type { NextConfig } from 'next';
 
 // ── CONFIGURE THIS ──────────────────────────────────────────────
-// If your site will live at https://<username>.github.io/<repo>/
-// set isProjectSite = true and set repoName accordingly.
-const isProjectSite = true; // set to false ONLY if your repo is <username>.github.io
-const repoName = 'portfolio-LuisRaulAriceaga'; // <-- put your repository name here (case-sensitive)
+// If your site will live at https://<username>.github.io/<repo>/,
+// set repoName to your repository name (case-sensitive).
+const repoName = 'portfolio-LuisRaulAriceaga';
+// Only add the subpath in PRODUCTION so dev runs at "/" without 404s
+const isProd = process.env.NODE_ENV === 'production';
+const base = isProd ? `/${repoName}` : '';
 // ────────────────────────────────────────────────────────────────
 
-const base = isProjectSite ? `/${repoName}` : '';
-
 const nextConfig: NextConfig = {
-  // Required for GitHub Pages (static files only)
+  // Static export for GitHub Pages
   output: 'export',
 
-  // Safer for static hosting: writes /route/index.html so /route works on Pages
+  // Safer for static hosting: creates /route/index.html so /route works on Pages
   trailingSlash: true,
 
-  // Disable Next's image optimization server (not available on GitHub Pages)
+  // Disable Next's image optimizer (not available on GitHub Pages)
   images: {
     unoptimized: true,
     remotePatterns: [{ protocol: 'https', hostname: '**' }],
   },
 
-  // Make all asset and link URLs resolve from the repo subpath
-  // (skip these if your repo is <username>.github.io)
-  basePath: base || undefined,
-  assetPrefix: base || undefined,
+// Read basePath/assetPrefix from environment
+  // - In dev (NEXT_PUBLIC_BASE_PATH="") => site runs at "/"
+  // - In prod (NEXT_PUBLIC_BASE_PATH="/<repo>") => site runs under the repo subpath
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || undefined,
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || undefined,
 
-  // Your existing options (kept as-is)
   reactStrictMode: true,
   poweredByHeader: false,
-
-  // NOTE: headers() is ignored on static export (no server on GitHub Pages).
-  // You can leave it here; it just won’t be applied by Pages.
-  headers: async () => [
-    {
-      source: '/(.*)',
-      headers: [
-        { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
-        { key: 'X-Content-Type-Options', value: 'nosniff' },
-        { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-      ],
-    },
-  ],
 };
 
 export default nextConfig;

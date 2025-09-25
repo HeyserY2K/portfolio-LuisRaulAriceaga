@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import I18nProvider from '../i18n/I18nProvider';
 import Footer from '../components/layout/Footer';
@@ -7,11 +6,6 @@ import Header from '../components/layout/Header';
 import GradientBackground from '../components/ui/GradientBackground';
 
 import '../globals.css';
-
-const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin'],
-});
 
 export const metadata: Metadata = {
   title: {
@@ -42,28 +36,24 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
-  const { locale: localeParam } = await params;
+  const localeParam = params.locale;
   const locale = localeParam as Locale;
   if (!locales.includes(locale)) return notFound();
 
   const messages = await getMessages(locale);
 
   return (
-    <html lang={locale}>
-      <body
-        className={`${inter.variable} bg-[var(--background)] text-[var(--text-primary)] antialiased relative min-h-screen`}
-      >
-        <GradientBackground />
-        <I18nProvider locale={locale} messages={messages}>
-          <div className="px-4 sm:px-6">
-            <Header />
-          </div>
-          <main className="container mx-auto p-6 sm:p-12">{children}</main>
-          <Footer />
-        </I18nProvider>
-      </body>
-    </html>
+    <>
+      <GradientBackground />
+      <I18nProvider locale={locale} messages={messages}>
+        <div className="px-4 sm:px-6">
+          <Header />
+        </div>
+        <main className="container mx-auto p-6 sm:p-12">{children}</main>
+        <Footer />
+      </I18nProvider>
+    </>
   );
 }

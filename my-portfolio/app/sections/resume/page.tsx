@@ -204,15 +204,17 @@ const formatEmploymentPeriod = (period: EmploymentPeriod): string => {
 };
 
 type SearchParams = Record<string, string | string[] | undefined>;
-type PageProps = { searchParams?: Promise<SearchParams>; params?: Promise<Record<string, string>> };
+type PageParams = { locale?: string };
+type PageProps = { searchParams?: SearchParams; params?: PageParams };
 
 const ResumePage = async ({ searchParams, params }: PageProps) => {
-  const sp: SearchParams = searchParams ? await searchParams : {};
+  const sp: SearchParams = searchParams ?? {};
   const langRaw = sp.lang;
   const langStr = Array.isArray(langRaw) ? langRaw[0] : langRaw;
-  const resolvedParams = params ? await params : undefined;
-  const localeParam = resolvedParams?.locale;
-  const lang = ((langStr === 'es' || localeParam === 'es') ? 'es' : 'en') as 'en' | 'es';
+
+  const localeParam = params?.locale;
+  const lang = (langStr === 'es' || localeParam === 'es' ? 'es' : 'en') as 'en' | 'es';
+
   const resume = await getResumeData(lang);
   const t = translations[lang];
   const name = `${resume.personal_information.first_name} ${resume.personal_information.last_name}`;
@@ -223,28 +225,48 @@ const ResumePage = async ({ searchParams, params }: PageProps) => {
       <header className="mb-6 flex items-start justify-between gap-4">
         <h1 className="mb-1 text-3xl font-bold">{name}</h1>
         <div className="flex items-center gap-2 text-sm">
-          <Link href={`/en/sections/resume`} className={lang === 'en' ? 'font-semibold underline' : 'hover:underline'}>EN</Link>
+          <Link
+            href={`/en/sections/resume`}
+            className={lang === 'en' ? 'font-semibold underline' : 'hover:underline'}
+          >
+            EN
+          </Link>
           <span>·</span>
-          <Link href={`/es/sections/resume`} className={lang === 'es' ? 'font-semibold underline' : 'hover:underline'}>ES</Link>
+          <Link
+            href={`/es/sections/resume`}
+            className={lang === 'es' ? 'font-semibold underline' : 'hover:underline'}
+          >
+            ES
+          </Link>
         </div>
       </header>
 
       <p className="text-sm text-[var(--text-secondary)]">
-          {location.city}, {location.state_region}, {location.country}
-        </p>
-        <p className="text-sm text-[var(--text-secondary)]">{email}</p>
-        <div className="mt-2 flex flex-wrap gap-4 text-sm">
-          {portfolio_url && (
-            <a className="text-[var(--brand-accent)] underline" href={portfolio_url} target="_blank" rel="noreferrer">
-              {t.portfolio}
-            </a>
-          )}
-          {linkedin_url && (
-            <a className="text-[var(--brand-accent)] underline" href={linkedin_url} target="_blank" rel="noreferrer">
-              {t.linkedIn}
-            </a>
-          )}
-        </div>
+        {location.city}, {location.state_region}, {location.country}
+      </p>
+      <p className="text-sm text-[var(--text-secondary)]">{email}</p>
+      <div className="mt-2 flex flex-wrap gap-4 text-sm">
+        {portfolio_url && (
+          <a
+            className="text-[var(--brand-accent)] underline"
+            href={portfolio_url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t.portfolio}
+          </a>
+        )}
+        {linkedin_url && (
+          <a
+            className="text-[var(--brand-accent)] underline"
+            href={linkedin_url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t.linkedIn}
+          </a>
+        )}
+      </div>
 
       <section className="mb-6">
         <h2 className="mb-2 text-2xl font-semibold">{t.professionalSummary}</h2>
@@ -302,7 +324,9 @@ const ResumePage = async ({ searchParams, params }: PageProps) => {
               </div>
             )}
             {exp.technologies_used?.length > 0 && (
-              <p className="mt-2 text-sm">{t.tech}: {exp.technologies_used.join(', ')}</p>
+              <p className="mt-2 text-sm">
+                {t.tech}: {exp.technologies_used.join(', ')}
+              </p>
             )}
           </div>
         ))}
@@ -313,7 +337,9 @@ const ResumePage = async ({ searchParams, params }: PageProps) => {
         {resume.education_details.map((edu, idx) => (
           <div key={idx} className="mb-4">
             <p className="font-bold">{edu.degree_title}</p>
-            <p>{edu.institution} • {edu.location}</p>
+            <p>
+              {edu.institution} • {edu.location}
+            </p>
             <p className="text-sm text-[var(--text-secondary)]">
               {edu.start_date} - {edu.end_date} • {edu.degree_level} • {edu.final_evaluation_grade}
             </p>
@@ -393,7 +419,9 @@ const ResumePage = async ({ searchParams, params }: PageProps) => {
             <p className="font-semibold">{t.versionControl}</p>
             <ul className="list-inside list-disc">
               {resume.tech_profile.version_control.map((vc, i) => (
-                <li key={i}>{vc.system} — {vc.proficiency}</li>
+                <li key={i}>
+                  {vc.system} — {vc.proficiency}
+                </li>
               ))}
             </ul>
           </div>
@@ -414,7 +442,9 @@ const ResumePage = async ({ searchParams, params }: PageProps) => {
         <h2 className="mb-2 text-2xl font-semibold">{t.languages}</h2>
         <ul className="list-inside list-disc">
           {resume.languages.map((lang, idx) => (
-            <li key={idx}>{lang.name} — {lang.proficiency}</li>
+            <li key={idx}>
+              {lang.name} — {lang.proficiency}
+            </li>
           ))}
         </ul>
       </section>
