@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import I18nProvider from '../i18n/I18nProvider';
+
 import Footer from '../components/layout/Footer';
 import Header from '../components/layout/Header';
 import GradientBackground from '../components/ui/GradientBackground';
+import I18nProvider from '../i18n/I18nProvider';
 
 import '../globals.css';
 

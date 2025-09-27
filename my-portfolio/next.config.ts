@@ -3,10 +3,7 @@ import type { NextConfig } from 'next';
 // ── CONFIGURE THIS ──────────────────────────────────────────────
 // If your site will live at https://<username>.github.io/<repo>/,
 // set repoName to your repository name (case-sensitive).
-const repoName = 'portfolio-LuisRaulAriceaga';
-// Only add the subpath in PRODUCTION so dev runs at "/" without 404s
-const isProd = process.env.NODE_ENV === 'production';
-const base = isProd ? `/${repoName}` : '';
+const baseFromEnv = process.env.NEXT_PUBLIC_BASE_PATH || ''; // [ADDED]
 // ────────────────────────────────────────────────────────────────
 
 const nextConfig: NextConfig = {
@@ -22,11 +19,11 @@ const nextConfig: NextConfig = {
     remotePatterns: [{ protocol: 'https', hostname: '**' }],
   },
 
-// Read basePath/assetPrefix from environment
+  // Read basePath/assetPrefix from environment
   // - In dev (NEXT_PUBLIC_BASE_PATH="") => site runs at "/"
   // - In prod (NEXT_PUBLIC_BASE_PATH="/<repo>") => site runs under the repo subpath
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || undefined,
-  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || undefined,
+  basePath: baseFromEnv || undefined,
+  assetPrefix: baseFromEnv || undefined,
 
   reactStrictMode: true,
   poweredByHeader: false,
