@@ -1,5 +1,5 @@
-import Hero from '../components/sections/Hero';
 import AboutSection from '../components/sections/AboutSection';
+import Hero from '../components/sections/Hero';
 // import BlogList from '../components/sections/BlogList'; //TODO: Disabled, future development
 import ProjectsGrid from '../components/sections/ProjectsGrid';
 // import StoreTeaser from '../components/sections/StoreTeaser'; //TODO: Disabled, future development

@@ -203,17 +203,13 @@ const formatEmploymentPeriod = (period: EmploymentPeriod): string => {
   return [start, end].filter(Boolean).join(' - ');
 };
 
-type SearchParams = Record<string, string | string[] | undefined>;
-type PageParams = { locale?: string };
-type PageProps = { searchParams?: SearchParams; params?: PageParams };
+// Removed searchParams usage to keep page fully static for export.
+type RouteParams = { locale?: string };
+type ResumePageProps = { params?: RouteParams };
 
-const ResumePage = async ({ searchParams, params }: PageProps) => {
-  const sp: SearchParams = searchParams ?? {};
-  const langRaw = sp.lang;
-  const langStr = Array.isArray(langRaw) ? langRaw[0] : langRaw;
-
+const ResumePage = async ({ params }: ResumePageProps) => {
   const localeParam = params?.locale;
-  const lang = (langStr === 'es' || localeParam === 'es' ? 'es' : 'en') as 'en' | 'es';
+  const lang = (localeParam === 'es' ? 'es' : 'en') as 'en' | 'es';
 
   const resume = await getResumeData(lang);
   const t = translations[lang];
