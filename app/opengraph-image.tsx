@@ -1,16 +1,10 @@
 import { ImageResponse } from 'next/og';
 
-// Use default (Node) runtime so it can be treated as static-compatible in export mode.
-// Removed edge runtime & force-static directive to avoid export errors.
-
-export const size = {
-  width: 1200,
-  height: 630,
-};
-
+// Simplified for static export; synchronous generation, default runtime.
+export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
-export default async function Image() {
+export default function Image() {
   return new ImageResponse(
     (
       <div
