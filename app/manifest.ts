@@ -12,6 +12,10 @@ export default function manifest(): MetadataRoute.Manifest {
     display: 'standalone',
     background_color: '#0a0a0a',
     theme_color: '#0a0a0a',
-    icons: [{ src: '/favicon.ico', sizes: 'any', type: 'image/x-icon' }],
+    // Added a versioned favicon (cache bust) plus an SVG icon to visibly test the change.
+    icons: [
+      { src: '/favicon.ico?v=2', sizes: 'any', type: 'image/x-icon' },
+      { src: '/globe.svg', sizes: 'any', type: 'image/svg+xml' },
+    ],
   };
 }
