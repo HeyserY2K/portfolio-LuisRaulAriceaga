@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
-// Edge runtime: allow dynamic generation (removing force-static to silence export warning)
-export const runtime = 'edge';
+// Use default (Node) runtime so it can be treated as static-compatible in export mode.
+// Removed edge runtime & force-static directive to avoid export errors.
 
 export const size = {
   width: 1200,
