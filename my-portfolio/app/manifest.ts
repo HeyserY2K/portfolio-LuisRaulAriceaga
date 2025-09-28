@@ -1,5 +1,8 @@
 import type { MetadataRoute } from 'next';
 
+// Mark as static for export mode
+export const dynamic = 'force-static';
+
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'My Portfolio - Luis Raul Ariceaga',
@@ -12,5 +15,3 @@ export default function manifest(): MetadataRoute.Manifest {
     icons: [{ src: '/favicon.ico', sizes: 'any', type: 'image/x-icon' }],
   };
 }
-
-

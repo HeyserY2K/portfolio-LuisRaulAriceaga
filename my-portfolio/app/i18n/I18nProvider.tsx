@@ -2,7 +2,8 @@
 
 import React, { createContext, useContext, useMemo } from 'react';
 
-export type Message = string | MessageMap;
+export type Message = string | number | boolean | null | Message[] | { [key: string]: Message };
+
 export interface MessageMap {
   [key: string]: Message;
 }

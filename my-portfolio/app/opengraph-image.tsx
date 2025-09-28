@@ -1,5 +1,8 @@
 import { ImageResponse } from 'next/og';
 
+// Mark static so it can be exported as a pre-rendered asset in export mode.
+export const dynamic = 'force-static';
+
 export const runtime = 'edge';
 
 export const size = {
@@ -28,8 +31,6 @@ export default async function Image() {
         Luis Raul Ariceaga · Portfolio
       </div>
     ),
-    size
+    size,
   );
 }
-
-
