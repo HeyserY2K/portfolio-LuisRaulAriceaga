@@ -1,8 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-// Mark static so it can be exported as a pre-rendered asset in export mode.
-export const dynamic = 'force-static';
-
+// Edge runtime: allow dynamic generation (removing force-static to silence export warning)
 export const runtime = 'edge';
 
 export const size = {
