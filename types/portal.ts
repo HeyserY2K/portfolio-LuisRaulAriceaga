@@ -61,5 +61,3 @@ export interface PortalData {
 }
 
 export type PortalBundle = Record<'en' | 'es', PortalData>;
-
-

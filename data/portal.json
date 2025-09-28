@@ -3,7 +3,11 @@
     "profile": {
       "name": "Luis Raul Ariceaga",
       "email": "luisra.heyser@gmail.com",
-      "location": { "city": "Monterrey", "state_region": "Nuevo León", "country": "México" }
+      "location": {
+        "city": "Monterrey",
+        "state_region": "Nuevo León",
+        "country": "México"
+      }
     },
     "about": {
       "summary": "Accomplished Frontend Engineer and UX Strategist with over five years of experience in transforming intricate business objectives into sophisticated, high-performance digital solutions.",
@@ -21,19 +25,33 @@
         {
           "title": "E-commerce Platform",
           "description": "A full-stack e-commerce solution built with Next.js and TypeScript",
-          "tech": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+          "tech": [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "PostgreSQL"
+          ],
           "link": "#"
         },
         {
           "title": "Task Management App",
           "description": "A collaborative task management tool with real-time updates",
-          "tech": ["React", "Node.js", "Socket.io", "MongoDB"],
+          "tech": [
+            "React",
+            "Node.js",
+            "Socket.io",
+            "MongoDB"
+          ],
           "link": "#"
         },
         {
           "title": "Portfolio Website",
           "description": "A modern portfolio website showcasing projects and skills",
-          "tech": ["Next.js", "TypeScript", "Tailwind CSS"],
+          "tech": [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS"
+          ],
           "link": "#"
         }
       ]
@@ -62,9 +80,21 @@
     },
     "social": {
       "links": [
-        { "name": "GitHub", "url": "https://github.com/lrariceaga", "icon": "📦" },
-        { "name": "LinkedIn", "url": "https://linkedin.com/in/lrariceaga", "icon": "💼" },
-        { "name": "Twitter", "url": "https://twitter.com/lrariceaga", "icon": "🐦" }
+        {
+          "name": "GitHub",
+          "url": "https://github.com/lrariceaga",
+          "icon": "📦"
+        },
+        {
+          "name": "LinkedIn",
+          "url": "https://linkedin.com/in/lrariceaga",
+          "icon": "💼"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://twitter.com/lrariceaga",
+          "icon": "🐦"
+        }
       ]
     },
     "store": {
@@ -75,7 +105,11 @@
     "profile": {
       "name": "Luis Raul Ariceaga",
       "email": "luisra.heyser@gmail.com",
-      "location": { "city": "Monterrey", "state_region": "Nuevo León", "country": "México" }
+      "location": {
+        "city": "Monterrey",
+        "state_region": "Nuevo León",
+        "country": "México"
+      }
     },
     "about": {
       "summary": "Ingeniero Frontend y Estratega UX con más de cinco años de experiencia transformando objetivos de negocio en soluciones digitales sofisticadas y de alto rendimiento.",
@@ -93,19 +127,33 @@
         {
           "title": "Plataforma E-commerce",
           "description": "Solución e-commerce full-stack construida con Next.js y TypeScript",
-          "tech": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+          "tech": [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "PostgreSQL"
+          ],
           "link": "#"
         },
         {
           "title": "App de Gestión de Tareas",
           "description": "Herramienta colaborativa de gestión de tareas con actualizaciones en tiempo real",
-          "tech": ["React", "Node.js", "Socket.io", "MongoDB"],
+          "tech": [
+            "React",
+            "Node.js",
+            "Socket.io",
+            "MongoDB"
+          ],
           "link": "#"
         },
         {
           "title": "Sitio de Portafolio",
           "description": "Sitio moderno de portafolio mostrando proyectos y habilidades",
-          "tech": ["Next.js", "TypeScript", "Tailwind CSS"],
+          "tech": [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS"
+          ],
           "link": "#"
         }
       ]
@@ -134,9 +182,21 @@
     },
     "social": {
       "links": [
-        { "name": "GitHub", "url": "https://github.com/lrariceaga", "icon": "📦" },
-        { "name": "LinkedIn", "url": "https://linkedin.com/in/lrariceaga", "icon": "💼" },
-        { "name": "Twitter", "url": "https://twitter.com/lrariceaga", "icon": "🐦" }
+        {
+          "name": "GitHub",
+          "url": "https://github.com/lrariceaga",
+          "icon": "📦"
+        },
+        {
+          "name": "LinkedIn",
+          "url": "https://linkedin.com/in/lrariceaga",
+          "icon": "💼"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://twitter.com/lrariceaga",
+          "icon": "🐦"
+        }
       ]
     },
     "store": {
