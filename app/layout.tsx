@@ -26,7 +26,8 @@ export const metadata: Metadata = {
     description: 'Showcasing my projects, blog, and future store.',
     url: '/',
     siteName: 'Luis Raul Ariceaga',
-    images: ['/opengraph-image'],
+    // Use a static asset suitable for export (removed dynamic opengraph-image route)
+    images: ['/portrait.jpg'],
     type: 'website',
   },
   twitter: {
