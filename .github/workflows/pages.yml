@@ -32,32 +32,31 @@ jobs:
         with:
           node-version: '20'
           cache: npm
-          cache-dependency-path: my-portfolio/package-lock.json
+          # After flatten: dependency file now at repo root
+          cache-dependency-path: package-lock.json
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           # Automatically configure Next.js for GitHub Pages
           static_site_generator: next
-      - name: Restore cache
+      - name: Restore Next.js build cache
         uses: actions/cache@v4
         with:
           path: |
-            my-portfolio/.next/cache
-          # Generate a new cache whenever packages or source files change.
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('my-portfolio/package-lock.json') }}-${{ hashFiles('my-portfolio/**/*.js', 'my-portfolio/**/*.jsx', 'my-portfolio/**/*.ts', 'my-portfolio/**/*.tsx') }}
-          # If source files changed but packages didn't, rebuild from a prior cache.
+            .next/cache
+          # Key now hashes root-level sources (flattened structure)
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('package-lock.json') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
           restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('my-portfolio/package-lock.json') }}-
+            ${{ runner.os }}-nextjs-${{ hashFiles('package-lock.json') }}-
       - name: Install dependencies
         run: npm ci
-        working-directory: ./my-portfolio
       - name: Build with Next.js
         run: npm run build
-        working-directory: ./my-portfolio
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./my-portfolio/out
+          # Static export output at root /out after flatten
+          path: ./out
 
   # Deployment job
   deploy:
