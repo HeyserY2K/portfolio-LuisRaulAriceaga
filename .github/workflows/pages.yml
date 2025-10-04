@@ -53,14 +53,14 @@ jobs:
       - name: Guard - ensure no legacy next.config.js
         run: |
           if [ -f next.config.js ]; then
-            echo "ERROR: next.config.js should not exist (using next.config.ts). Remove it to continue." >&2
+            echo "ERROR: next.config.js should not exist (using next.config.ts)." >&2
             exit 1
           fi
       - name: Build with Next.js
         run: npm run build
         env:
-          # Set base path for GitHub Pages (adjust if repository name changes or deploy root different)
-          NEXT_PUBLIC_BASE_PATH: /portfolio-LuisRaulAriceaga
+          # Custom domain (CNAME present), so leave base path empty
+          NEXT_PUBLIC_BASE_PATH: ''
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
