@@ -23,11 +23,14 @@ const formatEmploymentPeriod = (period: EmploymentPeriod): string => {
   return [start, end].filter(Boolean).join(' - ');
 };
 
-type RouteParams = { locale?: string };
-type ResumePageProps = { params?: RouteParams };
+// NOTE: Next.js 15 sometimes wraps `params` in a Promise in its generated `.next/types`.
+// To satisfy the inferred `PageProps` constraint during type checking we mirror that shape here.
+// (See similar pattern applied in `app/[locale]/layout.tsx`).
+type RouteParams = { locale: string };
+type ResumePageProps = { params: Promise<RouteParams> };
 
 const ResumePage = async ({ params }: ResumePageProps) => {
-  const localeParam = params?.locale;
+  const { locale: localeParam } = await params;
   const lang = (localeParam === 'es' ? 'es' : 'en') as 'en' | 'es';
 
   // Load resume data & labels. Using relative import instead of alias in a template
