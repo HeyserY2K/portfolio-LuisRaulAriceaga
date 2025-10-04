@@ -1,9 +1,10 @@
 'use client';
 
-import Section from '@/app/components/ui/Section';
 import GlassPanel from '@/app/components/ui/GlassPanel';
-import portalBundle from '@/data/portal.json';
-import type { PortalBundle, PortalData, PortalProject } from '@/types/portal';
+import Section from '@/app/components/ui/Section';
+import { getPortalData } from '@/lib/portal';
+import type { PortalProject } from '@/types/portal';
+
 import { useI18n } from '../../i18n/I18nProvider';
 
 /**
@@ -11,8 +12,7 @@ import { useI18n } from '../../i18n/I18nProvider';
  */
 const ProjectsGrid = () => {
   const { t, locale } = useI18n();
-  const bundle = portalBundle as PortalBundle;
-  const portal = (bundle[locale as 'en' | 'es'] ?? bundle.en) as PortalData;
+  const portal = getPortalData(locale);
   const projects: PortalProject[] = portal.projects.featured;
 
   return (
@@ -30,7 +30,7 @@ const ProjectsGrid = () => {
               {project.tech.map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-full bg-[rgb(var(--glass-rgb)_/_var(--glass-alpha))] px-3 py-1 text-sm border border-white/15 backdrop-blur-[8px]"
+                  className="rounded-full border border-white/15 bg-[rgb(var(--glass-rgb)_/_var(--glass-alpha))] px-3 py-1 text-sm backdrop-blur-[8px]"
                 >
                   {tech}
                 </span>

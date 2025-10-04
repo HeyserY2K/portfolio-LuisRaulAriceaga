@@ -3,6 +3,7 @@
 import Link from 'next/link';
 
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+
 import { useI18n } from '../i18n/I18nProvider';
 
 const Header = () => {

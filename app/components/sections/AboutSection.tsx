@@ -4,8 +4,7 @@ import Link from 'next/link';
 
 import GlassPanel from '@/app/components/ui/GlassPanel';
 import Section from '@/app/components/ui/Section';
-import portalBundle from '@/data/portal.json';
-import type { PortalBundle, PortalData } from '@/types/portal';
+import { getPortalData } from '@/lib/portal';
 
 import { useI18n } from '../../i18n/I18nProvider';
 
@@ -14,8 +13,7 @@ import { useI18n } from '../../i18n/I18nProvider';
  */
 const AboutSection = () => {
   const { t, locale } = useI18n();
-  const bundle = portalBundle as PortalBundle;
-  const portal = (bundle[locale as 'en' | 'es'] ?? bundle.en) as PortalData;
+  const portal = getPortalData(locale);
   // const name = portal.profile.name;
   const summary = portal.about.summary;
   const { email, location } = portal.profile;
