@@ -1,9 +1,9 @@
 'use client';
 
-import Section from '@/app/components/ui/Section';
 import GlassPanel from '@/app/components/ui/GlassPanel';
-import portalBundle from '@/data/portal.json';
-import type { PortalBundle, PortalData } from '@/types/portal';
+import Section from '@/app/components/ui/Section';
+import { getPortalData } from '@/lib/portal';
+
 import { useI18n } from '../../i18n/I18nProvider';
 
 /**
@@ -11,8 +11,7 @@ import { useI18n } from '../../i18n/I18nProvider';
  */
 const StoreTeaser = () => {
   const { t, locale } = useI18n();
-  const bundle = portalBundle as PortalBundle;
-  const portal = (bundle[locale as 'en' | 'es'] ?? bundle.en) as PortalData;
+  const portal = getPortalData(locale);
   return (
     <Section id="store">
       <h2 className="mb-8 text-3xl font-bold">{t('sections.store.title')}</h2>
