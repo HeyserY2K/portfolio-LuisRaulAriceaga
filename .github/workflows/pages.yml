@@ -27,8 +27,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: List repository root (debug)
-        run: ls -al .
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -41,8 +39,6 @@ jobs:
         with:
           # Automatically configure Next.js for GitHub Pages
           static_site_generator: next
-      - name: Post configure-pages listing (debug)
-        run: ls -al .
       - name: Neutralize auto-generated next.config.js (if any)
         run: |
           if [ -f next.config.js ]; then
@@ -67,14 +63,8 @@ jobs:
         env:
           # Custom domain (CNAME present), so leave base path empty
           NEXT_PUBLIC_BASE_PATH: ''
-      - name: List out directory (debug)
-        run: |
-          if [ -d out ]; then
-            echo "Listing out/";
-            ls -al out;
-          else
-            echo "WARNING: out directory not found after build" >&2;
-          fi
+      - name: Check internal links
+        run: node scripts/check-internal-links.mjs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
