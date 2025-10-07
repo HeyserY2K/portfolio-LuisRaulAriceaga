@@ -25,33 +25,19 @@
         {
           "title": "E-commerce Platform",
           "description": "A full-stack e-commerce solution built with Next.js and TypeScript",
-          "tech": [
-            "Next.js",
-            "TypeScript",
-            "Tailwind CSS",
-            "PostgreSQL"
-          ],
+          "tech": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
           "link": "#"
         },
         {
           "title": "Task Management App",
           "description": "A collaborative task management tool with real-time updates",
-          "tech": [
-            "React",
-            "Node.js",
-            "Socket.io",
-            "MongoDB"
-          ],
+          "tech": ["React", "Node.js", "Socket.io", "MongoDB"],
           "link": "#"
         },
         {
           "title": "Portfolio Website",
           "description": "A modern portfolio website showcasing projects and skills",
-          "tech": [
-            "Next.js",
-            "TypeScript",
-            "Tailwind CSS"
-          ],
+          "tech": ["Next.js", "TypeScript", "Tailwind CSS"],
           "link": "#"
         }
       ]
@@ -82,18 +68,18 @@
       "links": [
         {
           "name": "GitHub",
-          "url": "https://github.com/lrariceaga",
-          "icon": "📦"
+          "url": "https://github.com/heysery2k",
+          "icon": ""
         },
         {
           "name": "LinkedIn",
-          "url": "https://linkedin.com/in/lrariceaga",
-          "icon": "💼"
+          "url": "https://linkedin.com/in/lraf",
+          "icon": ""
         },
         {
-          "name": "Twitter",
-          "url": "https://twitter.com/lrariceaga",
-          "icon": "🐦"
+          "name": "Instagram",
+          "url": "https://www.instagram.com/heyser.y2k/",
+          "icon": ""
         }
       ]
     },
@@ -127,33 +113,19 @@
         {
           "title": "Plataforma E-commerce",
           "description": "Solución e-commerce full-stack construida con Next.js y TypeScript",
-          "tech": [
-            "Next.js",
-            "TypeScript",
-            "Tailwind CSS",
-            "PostgreSQL"
-          ],
+          "tech": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
           "link": "#"
         },
         {
           "title": "App de Gestión de Tareas",
           "description": "Herramienta colaborativa de gestión de tareas con actualizaciones en tiempo real",
-          "tech": [
-            "React",
-            "Node.js",
-            "Socket.io",
-            "MongoDB"
-          ],
+          "tech": ["React", "Node.js", "Socket.io", "MongoDB"],
           "link": "#"
         },
         {
           "title": "Sitio de Portafolio",
           "description": "Sitio moderno de portafolio mostrando proyectos y habilidades",
-          "tech": [
-            "Next.js",
-            "TypeScript",
-            "Tailwind CSS"
-          ],
+          "tech": ["Next.js", "TypeScript", "Tailwind CSS"],
           "link": "#"
         }
       ]
@@ -184,18 +156,18 @@
       "links": [
         {
           "name": "GitHub",
-          "url": "https://github.com/lrariceaga",
-          "icon": "📦"
+          "url": "https://github.com/heysery2k",
+          "icon": ""
         },
         {
           "name": "LinkedIn",
-          "url": "https://linkedin.com/in/lrariceaga",
-          "icon": "💼"
+          "url": "https://linkedin.com/in/lraf",
+          "icon": ""
         },
         {
-          "name": "Twitter",
-          "url": "https://twitter.com/lrariceaga",
-          "icon": "🐦"
+          "name": "Instagram",
+          "url": "https://www.instagram.com/heyser.y2k/",
+          "icon": ""
         }
       ]
     },
