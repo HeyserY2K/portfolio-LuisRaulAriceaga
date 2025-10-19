@@ -17,7 +17,7 @@ const HamburgerButton = forwardRef<HTMLButtonElement, HamburgerButtonProps>(
         aria-label={open ? labelClose : labelOpen}
         aria-expanded={open}
         aria-controls="mobile-nav-panel"
-        className={`flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/10 text-sm backdrop-blur-md transition-colors hover:bg-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/15 ${className}`}
+        className={`glass-surface flex h-9 w-9 items-center justify-center rounded-full text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary ${className}`}
         {...rest}
       >
         {/* Hamburger / Close Icon (professional proportions)

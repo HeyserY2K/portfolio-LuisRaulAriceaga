@@ -43,7 +43,7 @@ const Header = () => {
 
   return (
     <header
-      className="sticky top-4 z-40 mx-auto flex w-[min(100%,_1200px)] items-center gap-3 rounded-full border border-[color:var(--glass-border)] bg-[rgb(var(--glass-rgb)_/_var(--glass-alpha))] px-4 py-2 shadow-[0_8px_24px_rgba(0,0,0,var(--glass-shadow-strength))] backdrop-blur-[12px] sm:px-6"
+      className="glass-surface sticky top-4 z-40 mx-auto flex w-[min(100%,_1200px)] items-center gap-3 px-4 py-2 sm:px-6"
       aria-label={t('nav.aria.main')}
     >
       <Link
@@ -83,6 +83,7 @@ const Header = () => {
         />
       </div>
 
+      {/* Mobile menu portaled to body; header height unaffected */}
       <MobileMenu open={open} onClose={close} triggerRef={triggerRef} />
     </header>
   );

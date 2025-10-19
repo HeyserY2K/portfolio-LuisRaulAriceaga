@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+
 import GlassButton from '@/app/components/ui/GlassButton';
 import GlassPanel from '@/app/components/ui/GlassPanel';
 import Section from '@/app/components/ui/Section';
@@ -32,9 +33,7 @@ export default function Hero() {
               href={`mailto:luisra.heyser@gmail.com`}
               variant="secondary"
               className="ring-1 ring-[rgba(var(--accent-contrast-rgb),0.25)]"
-              style={{
-                alignContent: 'center',
-              }}
+              style={{ alignContent: 'center' }}
             >
               {t('sections.hero.emailCta')}
             </GlassButton>

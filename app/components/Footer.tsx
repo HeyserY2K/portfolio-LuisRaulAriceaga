@@ -10,7 +10,7 @@ const Footer = () => {
   const text = t('footer.copyright', { year });
   return (
     <footer
-      className="mx-auto my-10 w-[min(100%,_1200px)] rounded-2xl border border-[color:var(--glass-border)] bg-[rgb(var(--glass-rgb)_/_var(--glass-alpha))] py-6 text-center text-[var(--text-primary)] shadow-[0_8px_24px_rgba(0,0,0,var(--glass-shadow-strength))] backdrop-blur-[12px]"
+      className="glass-surface mx-auto my-10 w-[min(100%,_1200px)] py-6 text-center text-[var(--text-primary)]"
       aria-label={t('footer.aria.footer')}
     >
       <p>{text}</p>

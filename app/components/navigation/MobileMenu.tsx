@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 import { useNavItems } from './NavConfig';
 
@@ -20,6 +21,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, triggerRef }) =>
   const { items } = useNavItems();
   const panelRef = useRef<HTMLDivElement | null>(null);
   const firstLinkRef = useRef<HTMLAnchorElement | null>(null);
+  const [style, setStyle] = useState<React.CSSProperties | null>(null);
 
   // Focus first link when opening
   useEffect(() => {
@@ -52,15 +54,57 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, triggerRef }) =>
     return () => window.removeEventListener('pointerdown', handler);
   }, [open, onClose, triggerRef]);
 
-  if (!open) return null;
+  // Position menu relative to trigger (professional libs anchor to trigger rect)
+  useEffect(() => {
+    if (!open) {
+      setStyle(null);
+      return;
+    }
+    const anchor = triggerRef?.current;
+    if (!anchor) return;
+    const rect = anchor.getBoundingClientRect();
+    const gap = 8; // space below trigger
+    const width = 256; // default width
+    // Align right edge of panel with right edge of trigger for consistency
+    const left = Math.max(8, Math.min(rect.right - width, window.innerWidth - width - 8));
+    const top = rect.bottom + gap;
+    setStyle({ position: 'fixed', top, left, zIndex: 60, width });
+  }, [open, triggerRef]);
 
-  return (
+  // Reposition on resize / scroll while open
+  useEffect(() => {
+    if (!open) return;
+    const handler = () => {
+      const anchor = triggerRef?.current;
+      if (!anchor) return;
+      const rect = anchor.getBoundingClientRect();
+      const gap = 8;
+      const width = 256;
+      const left = Math.max(8, Math.min(rect.right - width, window.innerWidth - width - 8));
+      const top = rect.bottom + gap;
+      setStyle((prev) =>
+        prev ? { ...prev, top, left } : { position: 'fixed', top, left, zIndex: 60, width },
+      );
+    };
+    window.addEventListener('resize', handler);
+    window.addEventListener('scroll', handler, { passive: true });
+    return () => {
+      window.removeEventListener('resize', handler);
+      window.removeEventListener('scroll', handler);
+    };
+  }, [open, triggerRef]);
+
+  if (!open || !style) return null;
+
+  const panel = (
     <div
       ref={panelRef}
       id="mobile-nav-panel"
       role="dialog"
       aria-modal="true"
-      className="absolute right-0 top-full mt-3 w-64 max-w-[calc(100vw-2rem)] overflow-hidden rounded-2xl border border-white/20 bg-white/95 shadow-xl backdrop-blur-xl md:hidden dark:border-white/10 dark:bg-[rgba(20,20,20,0.92)]"
+      style={style}
+      // eslint-disable-next-line tailwindcss/classnames-order
+      className="md:hidden overflow-hidden glass-surface glass-interactive animate-fade-slide"
     >
       <ul className="flex flex-col divide-y divide-white/10 text-sm">
         {items.map((item, idx) => (
@@ -70,7 +114,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, triggerRef }) =>
               href={item.href}
               aria-label={item.aria}
               onClick={onClose}
-              className="block w-full px-5 py-3 font-medium text-[var(--text-primary)] transition-colors hover:bg-white/20 hover:text-[var(--brand-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary dark:hover:bg-white/10"
+              className="block w-full px-5 py-3 font-medium text-[var(--text-primary)] transition-colors hover:bg-white/15 hover:text-[var(--brand-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary dark:hover:bg-white/10"
             >
               {item.label}
             </Link>
@@ -79,6 +123,8 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, triggerRef }) =>
       </ul>
     </div>
   );
+
+  return createPortal(panel, document.body);
 };
 
 export default MobileMenu;
