@@ -114,7 +114,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, triggerRef }) =>
               href={item.href}
               aria-label={item.aria}
               onClick={onClose}
-              className="block w-full px-5 py-3 font-medium text-[var(--text-primary)] transition-colors hover:bg-white/15 hover:text-[var(--brand-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary dark:hover:bg-white/10"
+              className="block w-full px-5 py-3 font-medium text-[var(--text-primary)] transition-colors hover:bg-[var(--hover-bg-light)] hover:text-[var(--brand-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary"
             >
               {item.label}
             </Link>

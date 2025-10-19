@@ -42,7 +42,7 @@ const AboutSection = () => {
             {portal.about.skills.slice(0, 10).map((skill) => (
               <span
                 key={skill}
-                className="rounded-full border border-white/15 bg-[rgb(var(--glass-rgb)_/_var(--glass-alpha))] px-3 py-1 backdrop-blur-[8px]"
+                className="rounded-full border border-[var(--chip-border)] bg-[var(--chip-bg)] px-3 py-1 backdrop-blur-[8px]"
               >
                 {skill}
               </span>

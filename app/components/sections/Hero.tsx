@@ -15,7 +15,7 @@ export default function Hero() {
     <Section className="pt-20">
       <div className="grid items-center gap-8 md:grid-cols-2">
         <div>
-          <div className="mb-4 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs backdrop-blur-md dark:bg-white/5">
+          <div className="mb-4 inline-flex items-center rounded-full border border-[var(--badge-border)] bg-[var(--badge-bg)] px-3 py-1 text-xs backdrop-blur-md">
             <span>{t('sections.hero.availability')}</span>
           </div>
 
