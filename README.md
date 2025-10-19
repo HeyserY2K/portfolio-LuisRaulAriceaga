@@ -45,7 +45,7 @@ Guiding principles:
 | Internationalization | Route‑level locale segment (`/[locale]`), lightweight message loader, separate résumé label namespace.               |
 | Content access       | Single selector `getPortalData(locale)` encapsulates locale fallback.                                                |
 | Résumé page          | Fully static, dynamic JSON import per locale, isolated domain types in `types/resume.ts`.                            |
-| UI System            | Reusable glass components (`GlassPanel`, `GlassButton`, `Section`, `GradientBackground`) with design tokens.         |
+| UI System            | Centralized glassmorphism with CSS variables, brand-compliant design tokens, and professional hover interactions.    |
 | Accessibility        | Semantic headings, focus-visible styles, reduced-motion respect, color contrast mindful.                             |
 | Performance          | Static export, no client data fetching for core content; minimal client JS in section components only where needed.  |
 | Deployment           | GitHub Pages static export (`output: 'export'`), custom domain via `CNAME`, workflow cleans legacy config artifacts. |
@@ -131,19 +131,29 @@ Loading flow (résumé page):
 
 ## 6. Styling System & UI Tokens
 
-Defined mainly in `globals.css` & CSS variables:
+Centralized glassmorphism design system in `globals.css` with CSS variables for light/dark mode compatibility:
 
-- Glass tokens: RGB base (`--glass-rgb`), alpha, border, shadow strengths.
-- Brand palette: accent primary/secondary/tertiary/fuchsia/contrast variables consumed by gradient + pill tags.
-- Gradients & animated blobs implemented with pure CSS (no canvas) and respect `prefers-reduced-motion`.
+**Glass System Architecture:**
 
-Primitives:
-| Component | Responsibility |
-| --------- | ------------- |
-| `GlassPanel` | Frosted translucent surface with consistent blur/border/shadow. |
-| `GlassButton` | Interaction variant with hover/active states. |
-| `Section` | Semantic wrapper + spacing & responsive container logic. |
-| `GradientBackground` | Layered animated radial blobs with extremely light GPU cost. |
+- **CSS Classes**: `.glass-surface`, `.glass-interactive`, `.glass-panel`, `.glass-button` with variants
+- **Brand Colors**: Original purple palette (`#8D69BB`) with professional hover effects
+- **Adaptive Tokens**: CSS variables for backgrounds, borders, shadows, and gradients that adjust for dark mode
+- **Professional Interactions**: Apple-inspired subtle borders and big tech hover animations
+
+**Brand Palette (RGB Variables):**
+
+- Primary: `--accent-primary-rgb: 141 105 187` (Brand purple)
+- Secondary: `--accent-secondary-rgb: 99 102 241` (Indigo)
+- Contrast: `--accent-contrast-rgb: 204 44 44` (Persian red)
+
+**Glass Components:**
+| Component | Responsibility | Features |
+| --------- | ------------- | -------- |
+| `GlassPanel` | Content containers | Centralized `.glass-panel` class, subtle hover borders |
+| `GlassButton` | Interactive elements | Primary/secondary variants, professional shadows on hover |
+| `Section` | Layout wrapper | Semantic structure + responsive spacing |
+| `GradientBackground` | Animated backdrop | Pure CSS radial gradients, motion-safe |
+| `MobileMenu` | Navigation overlay | Portal-based positioning, brand-compatible hover states |
 
 ---
 
