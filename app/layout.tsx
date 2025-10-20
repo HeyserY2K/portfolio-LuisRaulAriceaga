@@ -17,12 +17,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
   title: {
-    default: 'My Portfolio - Luis Raul Ariceaga',
+    default: 'Portfolio - Luis Raul Ariceaga',
     template: '%s | Luis Raul Ariceaga',
   },
   description: 'Showcasing my projects, blog, and future store.',
   openGraph: {
-    title: 'My Portfolio - Luis Raul Ariceaga',
+    title: 'Portfolio - Luis Raul Ariceaga',
     description: 'Showcasing my projects, blog, and future store.',
     url: '/',
     siteName: 'Luis Raul Ariceaga',

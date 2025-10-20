@@ -11,7 +11,7 @@ import '../globals.css';
 
 export const metadata: Metadata = {
   title: {
-    default: 'My Portfolio - Luis Raul Ariceaga',
+    default: 'Portfolio - Luis Raul Ariceaga',
     template: '%s | Luis Raul Ariceaga',
   },
   description: 'Showcasing my projects, blog, and future store.',
