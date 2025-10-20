@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { cn } from '../../lib/cn';
 
 type GradientBackgroundProps = {
@@ -13,7 +14,8 @@ export default function GradientBackground({ className }: GradientBackgroundProp
     >
       {/* Animated, low-cost blobs: all brand colors distributed */}
       {/* Purple (primary) – top-left (small hitbox, larger visual) */}
-      <div className="absolute left-[6%] top-[8%] h-[28vh] w-[22vw] dvd-x-1 dvd-y-2">
+      {/* DVD classes removed for performance optimization classes: dvd-x-1 dvd-y-2 */}
+      <div className="absolute left-[6%] top-[8%] h-[28vh] w-[22vw]">
         <div
           className="pointer-events-none absolute left-1/2 top-1/2 h-[180%] w-[180%] -translate-x-1/2 -translate-y-1/2 blur-3xl"
           style={{
@@ -24,7 +26,8 @@ export default function GradientBackground({ className }: GradientBackgroundProp
         />
       </div>
       {/* Indigo (secondary) – top-right */}
-      <div className="absolute right-[6%] top-[6%] h-[34vh] w-[26vw] dvd-x-3 dvd-y-1">
+      {/* DVD classes removed for performance optimization classes: dvd-x-3 dvd-y-1 */}
+      <div className="absolute right-[6%] top-[6%] h-[34vh] w-[26vw] ">
         <div
           className="pointer-events-none absolute left-1/2 top-1/2 h-[190%] w-[190%] -translate-x-1/2 -translate-y-1/2 blur-3xl"
           style={{
@@ -35,7 +38,8 @@ export default function GradientBackground({ className }: GradientBackgroundProp
         />
       </div>
       {/* Red (Persian) – bottom-left */}
-      <div className="absolute bottom-[6%] left-[8%] h-[46vh] w-[38vw] dvd-x-5 dvd-y-3">
+      {/* DVD classes removed for performance optimization classes: dvd-x-5 dvd-y-3 */}
+      <div className="absolute bottom-[6%] left-[8%] h-[46vh] w-[38vw] ">
         <div
           className="pointer-events-none absolute left-1/2 top-1/2 h-[170%] w-[170%] -translate-x-1/2 -translate-y-1/2 blur-[60px]"
           style={{
@@ -46,7 +50,8 @@ export default function GradientBackground({ className }: GradientBackgroundProp
         />
       </div>
       {/* Aqua (tertiary) – center-mid */}
-      <div className="absolute left-1/2 top-[55%] h-[40vh] w-[32vw] -translate-x-1/2 -translate-y-1/2 dvd-x-2 dvd-y-4">
+      {/* DVD classes removed for performance optimization classes: dvd-x-2 dvd-y-4 */}
+      <div className="absolute left-1/2 top-[55%] h-[40vh] w-[32vw] -translate-x-1/2 -translate-y-1/2 ">
         <div
           className="pointer-events-none absolute left-1/2 top-1/2 h-[185%] w-[185%] -translate-x-1/2 -translate-y-1/2 blur-3xl"
           style={{
@@ -57,7 +62,8 @@ export default function GradientBackground({ className }: GradientBackgroundProp
         />
       </div>
       {/* Fuchsia – bottom-right */}
-      <div className="absolute right-[10%] bottom-[8%] h-[22vh] w-[18vw] translate-x-1/2 dvd-x-4 dvd-y-5">
+      {/* DVD classes removed for performance optimization classes: dvd-x-4 dvd-y-5 */}
+      <div className="absolute bottom-[8%] right-[10%] h-[22vh] w-[18vw] translate-x-1/2 ">
         <div
           className="pointer-events-none absolute left-1/2 top-1/2 h-[210%] w-[210%] -translate-x-1/2 -translate-y-1/2 blur-3xl"
           style={{
