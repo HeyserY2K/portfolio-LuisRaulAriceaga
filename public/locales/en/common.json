@@ -27,7 +27,7 @@
     }
   },
   "footer": {
-    "copyright": "© {year} Luis Raul's Portfolio. All rights reserved.",
+    "copyright": "© {year} Luis Raul's Portfolio.",
     "aria": {
       "footer": "Footer"
     },

@@ -27,7 +27,7 @@
     }
   },
   "footer": {
-    "copyright": "© {year} Portafolio de Luis Raul. Todos los derechos reservados.",
+    "copyright": "© {year} Portafolio de Luis Raul.",
     "aria": {
       "footer": "Pie de página"
     },
