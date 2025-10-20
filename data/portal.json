@@ -23,22 +23,25 @@
     "projects": {
       "featured": [
         {
-          "title": "E-commerce Platform",
-          "description": "A full-stack e-commerce solution built with Next.js and TypeScript",
-          "tech": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
-          "link": "#"
+          "title": "ActivApp - Habit Tracker",
+          "description": "An app designed to monitor both positive and negative habits, facilitating progress in overcoming undesirable habits while fostering the development of healthier ones.",
+          "tech": ["HTML/CSS/JS", "Adobe XD", "Responsive Design"],
+          "link": "https://github.com/HeyserY2K/Pagina-Habitos",
+          "thumbnail": "/projects/project-Activapp.png"
         },
         {
-          "title": "Task Management App",
-          "description": "A collaborative task management tool with real-time updates",
-          "tech": ["React", "Node.js", "Socket.io", "MongoDB"],
-          "link": "#"
+          "title": "Heroica - Craft Beer Catalog",
+          "description": "My inaugural website showcases a catalog of products from a craft beer company, emphasizing the diverse range of offerings, location details, and contact information.",
+          "tech": ["HTML/CSS/JS", "PHP", "MySQL", "XAMPP"],
+          "link": "https://github.com/HeyserY2K/PaginaHeroica",
+          "thumbnail": "/projects/project-HeroicaWebPage.png"
         },
         {
-          "title": "Portfolio Website",
-          "description": "A modern portfolio website showcasing projects and skills",
-          "tech": ["Next.js", "TypeScript", "Tailwind CSS"],
-          "link": "#"
+          "title": "Portfolio Platform",
+          "description": "Bilingual portfolio built with Next.js App Router and TypeScript, styled with Tailwind CSS. Static-exported for GitHub Pages with a focus on accessibility, performance, and lightweight i18n.",
+          "tech": ["Next.js", "TypeScript", "Tailwind CSS", "Static Export"],
+          "link": "https://github.com/HeyserY2K/portfolio-LuisRaulAriceaga",
+          "thumbnail": "/projects/project-Portfolio.png"
         }
       ]
     },
@@ -111,22 +114,25 @@
     "projects": {
       "featured": [
         {
-          "title": "Plataforma E-commerce",
-          "description": "Solución e-commerce full-stack construida con Next.js y TypeScript",
-          "tech": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
-          "link": "#"
+          "title": "ActivApp - Rastreador de Hábitos",
+          "description": "Una aplicación diseñada para monitorear hábitos tanto positivos como negativos, facilitando el progreso en superar hábitos indeseables mientras fomenta el desarrollo de otros más saludables.",
+          "tech": ["HTML/CSS/JS", "Adobe XD", "Diseño Responsivo"],
+          "link": "https://github.com/HeyserY2K/Pagina-Habitos",
+          "thumbnail": "/projects/project-Activapp.png"
         },
         {
-          "title": "App de Gestión de Tareas",
-          "description": "Herramienta colaborativa de gestión de tareas con actualizaciones en tiempo real",
-          "tech": ["React", "Node.js", "Socket.io", "MongoDB"],
-          "link": "#"
+          "title": "Heroica - Catálogo de Cerveza Artesanal",
+          "description": "Mi primer sitio web presenta un catálogo de productos de una empresa de cerveza artesanal, enfatizando la diversa gama de ofertas, detalles de ubicación e información de contacto.",
+          "tech": ["HTML/CSS/JS", "PHP", "MySQL", "XAMPP"],
+          "link": "https://github.com/HeyserY2K/PaginaHeroica",
+          "thumbnail": "/projects/project-HeroicaWebPage.png"
         },
         {
-          "title": "Sitio de Portafolio",
-          "description": "Sitio moderno de portafolio mostrando proyectos y habilidades",
-          "tech": ["Next.js", "TypeScript", "Tailwind CSS"],
-          "link": "#"
+          "title": "Plataforma de Portafolio",
+          "description": "Portafolio bilingüe construido con Next.js App Router y TypeScript, estilizado con Tailwind CSS. Exportado de forma estática para GitHub Pages con enfoque en accesibilidad, rendimiento e i18n ligero.",
+          "tech": ["Next.js", "TypeScript", "Tailwind CSS", "Export estático"],
+          "link": "https://github.com/HeyserY2K/portfolio-LuisRaulAriceaga",
+          "thumbnail": "/projects/project-Portfolio.png"
         }
       ]
     },
