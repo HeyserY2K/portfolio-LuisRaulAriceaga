@@ -30,7 +30,7 @@ const ProjectsGrid = () => {
         {projects.map((project) => (
           <GlassPanel
             key={project.title}
-            className="group cursor-pointer overflow-hidden p-0 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,var(--glass-shadow-strong))]"
+            className="smooth-lift-subtle group cursor-pointer overflow-hidden p-0 hover:shadow-[0_20px_40px_rgba(0,0,0,var(--glass-shadow-strong))]"
             onClick={() => handleProjectClick(project.link)}
           >
             {/* Thumbnail Section - Now Vertical */}
@@ -43,10 +43,10 @@ const ProjectsGrid = () => {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
               {/* Gradient Overlay for Better Text Contrast */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <div className="smooth-fade absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100" />
 
               {/* Floating Action Indicator */}
-              <div className="absolute right-3 top-3 rounded-full bg-[var(--glass-bg)] p-2 opacity-0 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:opacity-100">
+              <div className="smooth-scale smooth-fade absolute right-3 top-3 rounded-full bg-[var(--glass-bg)] p-2 opacity-0 backdrop-blur-sm group-hover:opacity-100">
                 <svg
                   className="h-4 w-4 text-[var(--brand-accent)]"
                   fill="none"
@@ -66,7 +66,7 @@ const ProjectsGrid = () => {
             {/* Content Section */}
             <div className="p-6">
               <div className="mb-4">
-                <h3 className="mb-3 text-xl font-semibold transition-colors duration-200 group-hover:text-[var(--brand-accent)]">
+                <h3 className="smooth-color mb-3 text-xl font-semibold group-hover:text-[var(--brand-accent)]">
                   {project.title}
                 </h3>
                 <p className="line-clamp-3 text-sm leading-relaxed text-[var(--text-secondary)]">

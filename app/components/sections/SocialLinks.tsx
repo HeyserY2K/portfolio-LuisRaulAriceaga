@@ -45,7 +45,7 @@ const SocialLinks = () => {
         {socialLinks.map((link) => (
           <GlassPanel
             key={link.name}
-            className="p-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(0,0,0,var(--glass-shadow-strong))]"
+            className="smooth-lift-subtle p-6 hover:shadow-[0_16px_36px_rgba(0,0,0,var(--glass-shadow-strong))]"
           >
             <Link
               href={link.url}
