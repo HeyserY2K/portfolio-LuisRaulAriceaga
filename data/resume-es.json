@@ -203,7 +203,7 @@
       "proficiency": "C1"
     }
   ],
-  "interests": ["Mentoría en robótica", "Fotografía", "Ajedrez"],
+  "interests": ["Mentoría en robótica", "Fotografía", "AI"],
   "work_preferences": {
     "remote_work": true,
     "in_person_work": true,
@@ -224,4 +224,3 @@
   },
   "legal_authorization": []
 }
-
