@@ -11,6 +11,7 @@ type CommonProps = {
   className?: string;
   children?: React.ReactNode;
   disableHighlight?: boolean; // hides pseudo bars if desired
+  colorAccent?: boolean; // enables color change to brand accent on hover
 };
 
 type GlassButtonProps = CommonProps & (AnchorProps | ButtonProps);
@@ -21,26 +22,53 @@ const variantClass: Record<'primary' | 'secondary', string> = {
 };
 
 export default function GlassButton(props: GlassButtonProps) {
-  const { variant = 'primary', className, children, disableHighlight = false } = props;
+  const {
+    variant = 'primary',
+    className,
+    children,
+    disableHighlight = false,
+    colorAccent = false,
+  } = props;
+
   const classes = cn(
     'glass-button',
     variantClass[variant],
     disableHighlight && 'before:hidden after:hidden',
+    colorAccent && 'glass-button-color-accent',
     className,
   );
 
   if (props.as === 'a') {
-    const { href, ...rest } = props as AnchorProps;
+    const { href } = props as AnchorProps;
+    // Create clean props by excluding custom component props
+    const cleanProps = Object.fromEntries(
+      Object.entries(props).filter(
+        ([key]) =>
+          !['variant', 'className', 'children', 'disableHighlight', 'colorAccent', 'as'].includes(
+            key,
+          ),
+      ),
+    ) as React.AnchorHTMLAttributes<HTMLAnchorElement>;
+
     return (
-      <a href={href} className={classes} {...rest}>
+      <a href={href} className={classes} {...cleanProps}>
         <span className="relative z-[1]">{children}</span>
       </a>
     );
   }
 
-  const { ...rest } = props as ButtonProps;
+  // Create clean props by excluding custom component props
+  const cleanProps = Object.fromEntries(
+    Object.entries(props).filter(
+      ([key]) =>
+        !['variant', 'className', 'children', 'disableHighlight', 'colorAccent', 'as'].includes(
+          key,
+        ),
+    ),
+  ) as React.ButtonHTMLAttributes<HTMLButtonElement>;
+
   return (
-    <button className={classes} {...rest}>
+    <button className={classes} {...cleanProps}>
       <span className="relative z-[1]">{children}</span>
     </button>
   );

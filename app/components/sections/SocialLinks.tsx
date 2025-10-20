@@ -23,15 +23,15 @@ const SocialLinks = () => {
     switch (name.toLowerCase()) {
       case 'github':
         return (
-          <FaGithub className="h-6 w-6 fill-[var(--text-primary)] transition-colors duration-300" />
+          <FaGithub className="smooth-color h-6 w-6 fill-[var(--text-primary)] group-hover:fill-[var(--brand-accent)]" />
         );
       case 'linkedin':
         return (
-          <FaLinkedin className="h-6 w-6 fill-[var(--text-primary)] transition-colors duration-300" />
+          <FaLinkedin className="smooth-color h-6 w-6 fill-[var(--text-primary)] group-hover:fill-[var(--brand-accent)]" />
         );
       case 'instagram':
         return (
-          <FaInstagram className="h-6 w-6 fill-[var(--text-primary)] transition-colors duration-300" />
+          <FaInstagram className="smooth-color h-6 w-6 fill-[var(--text-primary)] group-hover:fill-[var(--brand-accent)]" />
         );
       default:
         return null;
@@ -45,7 +45,7 @@ const SocialLinks = () => {
         {socialLinks.map((link) => (
           <GlassPanel
             key={link.name}
-            className="smooth-lift-subtle p-6 hover:shadow-[0_16px_36px_rgba(0,0,0,var(--glass-shadow-strong))]"
+            className="smooth-lift-subtle group p-6 hover:shadow-[0_16px_36px_rgba(0,0,0,var(--glass-shadow-strong))]"
           >
             <Link
               href={link.url}
@@ -54,7 +54,9 @@ const SocialLinks = () => {
               className="flex items-center justify-center gap-2"
             >
               {getSocialIcon(link.name)}
-              <span className="font-medium">{link.name}</span>
+              <span className="smooth-color font-medium group-hover:text-[var(--brand-accent)]">
+                {link.name}
+              </span>
             </Link>
           </GlassPanel>
         ))}

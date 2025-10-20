@@ -25,14 +25,13 @@ export default function Hero() {
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            <GlassButton as="a" href={`${prefix}/sections/resume`}>
+            <GlassButton as="a" href={`${prefix}/sections/resume`} colorAccent>
               {t('sections.hero.viewResume')}
             </GlassButton>
             <GlassButton
               as="a"
               href={`mailto:luisra.heyser@gmail.com`}
-              variant="secondary"
-              className="ring-1 ring-[rgba(var(--accent-contrast-rgb),0.25)]"
+              className="smooth-color smooth-color-accent"
               style={{ alignContent: 'center' }}
             >
               {t('sections.hero.emailCta')}
