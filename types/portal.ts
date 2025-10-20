@@ -20,6 +20,7 @@ export interface PortalProject {
   description: string;
   tech: string[];
   link: string;
+  thumbnail: string;
 }
 
 export interface PortalProjects {

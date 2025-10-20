@@ -23,22 +23,25 @@
     "projects": {
       "featured": [
         {
-          "title": "E-commerce Platform",
-          "description": "A full-stack e-commerce solution built with Next.js and TypeScript",
-          "tech": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
-          "link": "#"
+          "title": "ActivApp - Fitness Tracker",
+          "description": "A comprehensive fitness and activity tracking mobile application with real-time workout monitoring, progress analytics, and social features for fitness enthusiasts.",
+          "tech": ["React Native", "TypeScript", "Firebase", "Redux", "Expo"],
+          "link": "https://github.com/HeyserY2K",
+          "thumbnail": "/projects/project-Activapp.png"
         },
         {
-          "title": "Task Management App",
-          "description": "A collaborative task management tool with real-time updates",
-          "tech": ["React", "Node.js", "Socket.io", "MongoDB"],
-          "link": "#"
+          "title": "Heroica - Corporate Website",
+          "description": "A modern corporate website featuring responsive design, CMS integration, and optimized performance for a professional services company.",
+          "tech": ["Next.js", "Strapi", "Tailwind CSS", "Vercel"],
+          "link": "https://github.com/HeyserY2K",
+          "thumbnail": "/projects/project-HeroicaWebPage.png"
         },
         {
-          "title": "Portfolio Website",
-          "description": "A modern portfolio website showcasing projects and skills",
-          "tech": ["Next.js", "TypeScript", "Tailwind CSS"],
-          "link": "#"
+          "title": "Portfolio Platform",
+          "description": "This very portfolio website - a bilingual, static-generated showcase built with modern web technologies and deployed to GitHub Pages.",
+          "tech": ["Next.js", "TypeScript", "Tailwind CSS", "i18n"],
+          "link": "https://github.com/HeyserY2K/portfolio-LuisRaulAriceaga",
+          "thumbnail": "/projects/project-Activapp.png"
         }
       ]
     },
@@ -111,22 +114,25 @@
     "projects": {
       "featured": [
         {
-          "title": "Plataforma E-commerce",
-          "description": "Solución e-commerce full-stack construida con Next.js y TypeScript",
-          "tech": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
-          "link": "#"
+          "title": "ActivApp - Rastreador de Fitness",
+          "description": "Una aplicación móvil integral para rastreo de fitness y actividades con monitoreo de entrenamientos en tiempo real, analíticas de progreso y características sociales para entusiastas del fitness.",
+          "tech": ["React Native", "TypeScript", "Firebase", "Redux", "Expo"],
+          "link": "https://github.com/HeyserY2K",
+          "thumbnail": "/projects/project-Activapp.png"
         },
         {
-          "title": "App de Gestión de Tareas",
-          "description": "Herramienta colaborativa de gestión de tareas con actualizaciones en tiempo real",
-          "tech": ["React", "Node.js", "Socket.io", "MongoDB"],
-          "link": "#"
+          "title": "Heroica - Sitio Web Corporativo",
+          "description": "Un sitio web corporativo moderno con diseño responsivo, integración de CMS y rendimiento optimizado para una empresa de servicios profesionales.",
+          "tech": ["Next.js", "Strapi", "Tailwind CSS", "Vercel"],
+          "link": "https://github.com/HeyserY2K",
+          "thumbnail": "/projects/project-HeroicaWebPage.png"
         },
         {
-          "title": "Sitio de Portafolio",
-          "description": "Sitio moderno de portafolio mostrando proyectos y habilidades",
-          "tech": ["Next.js", "TypeScript", "Tailwind CSS"],
-          "link": "#"
+          "title": "Plataforma de Portafolio",
+          "description": "Este mismo sitio de portafolio - un showcase bilingüe generado estáticamente construido con tecnologías web modernas y desplegado en GitHub Pages.",
+          "tech": ["Next.js", "TypeScript", "Tailwind CSS", "i18n"],
+          "link": "https://github.com/HeyserY2K/portfolio-LuisRaulAriceaga",
+          "thumbnail": "/projects/project-Activapp.png"
         }
       ]
     },
