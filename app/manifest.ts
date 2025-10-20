@@ -5,7 +5,7 @@ export const dynamic = 'force-static';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'My Portfolio - Luis Raul Ariceaga',
+    name: 'Portfolio - Luis Raul Ariceaga',
     short_name: 'Portfolio',
     description: 'Showcasing projects, blog and resume of Luis Raul Ariceaga',
     start_url: '/',
