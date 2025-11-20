@@ -66,11 +66,11 @@ export default async function LocaleLayout({
     <>
       <GradientBackground />
       <I18nProvider locale={locale} messages={messages}>
-        <div className="px-4 sm:px-6">
+        <div className="mx-auto flex min-h-screen w-full max-w-[1200px] flex-col px-4 sm:px-6">
           <Header />
+          <main className="flex-grow py-6 sm:py-12">{children}</main>
+          <Footer />
         </div>
-        <main className="container mx-auto p-6 sm:p-12">{children}</main>
-        <Footer />
       </I18nProvider>
     </>
   );
